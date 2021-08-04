@@ -74,16 +74,6 @@ $(function(){
 	}
 	/******** 모바일 전용 조정 ********/
 
-	$(window).scroll(function(){
-		var nowScroll = $(window).scrollTop();
-		$(".hideme").each(function(i){
-			if( $(this).hasClass("shown") == false && nowScroll + screenHeight > $(this).offset().top + $(this).outerHeight()*0.5 ){
-				$(this).addClass("shown")
-				$(this).stop().animate({"opacity":footPrintOpacity},1000);
-			}
-		});
-
-	});
 
 
 	function makeSquare(){
@@ -115,7 +105,7 @@ $(function(){
 			if(v.final == "O"){
 				partyStr += " final"
 			}
-			console.log(partyStr);
+			//console.log(partyStr);
 			var class_name = "square " + partyStr; 
 			var pixel = $("<div />", { "class": class_name } );
 			var opacity = 1;
@@ -169,6 +159,14 @@ $(function(){
             $(".fixed-holder").addClass("fixed-holder-bottom");
          }
       }
+
+		$(".hideme").each(function(i){
+			if( $(this).hasClass("shown") == false && nowScroll + screenHeight > $(this).offset().top + $(this).outerHeight()*0.5 ){
+				$(this).addClass("shown")
+				$(this).stop().animate({"opacity": 1},1000);
+			}
+		});
+
 
       checkMapStage(nowScroll);
    	});
@@ -238,7 +236,7 @@ $(function(){
 	//    }
 	
 	function checkMapStage(n){
-		var $StagePoint = $(".spacer");
+		var $StagePoint = $(".fixed-animation .spacer");
 		if( n < $StagePoint.eq(0).offset().top){ 
 			adjustStage(0);
 		}else if( n >= $StagePoint.eq($StagePoint.length-1).offset().top ){
@@ -258,6 +256,12 @@ $(function(){
 			console.log(thisIndex);
 	   });*/
 	   
+
+
+	$(".case-box").each(function(){
+		$(this).css({"top": (screenHeight-$(this).height())/2+"px"});
+	})
+
 	$(".elected").on("click", function(){
 		$(this).css({"border": "1px solid #282828"});
 		var thisIndex = $(this).index();
