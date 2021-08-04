@@ -76,6 +76,20 @@ $(function(){
 
 
 
+	function makeFakeSquare(){
+		var $container = $("#square-holder-2"); //박스담을 이름
+		var conWidth = Math.floor(screenWidth);
+		var conHeight = Math.floor(screenHeight);
+		for(i=0;i<1430;i++){
+			var class_name = "square fakeSquare" 
+			var pixel = $("<div />", { "class": class_name } );
+			var opacity = 1;
+			pixel.css({"opacity": opacity});
+			$container.append(pixel);
+		}
+		
+	};
+
 	function makeSquare(){
 		var $container = $("#square-holder"); //박스담을 이름
 		var conWidth = Math.floor(screenWidth);
@@ -129,6 +143,7 @@ $(function(){
 		};*/
 		   
 	};
+	makeFakeSquare();
 	makeSquare();
 	var stage = "before";
 	$(window).scroll(function(){
@@ -142,6 +157,7 @@ $(function(){
          //   console.log("맵영역");
             $(".fixed-holder").addClass("fixed-holder-on");
             $(".fixed-holder").removeClass("fixed-holder-bottom");
+			$(".person-number-board").fadeIn();
          }
 
       }else if( nowScroll < $(".fixed-animation").offset().top ){
@@ -150,6 +166,7 @@ $(function(){
          //   console.log("맵영역이전");
             $(".fixed-holder").removeClass("fixed-holder-on");
             $(".fixed-holder").removeClass("fixed-holder-bottom");
+			$(".person-number-board").hide();
          }
       }else if( nowScroll >= endPoint){
          if(stage !== "after"){
@@ -158,6 +175,7 @@ $(function(){
             $(".fixed-holder").removeClass("fixed-holder-on");
             $(".fixed-holder").addClass("fixed-holder-bottom");
 			$(".people-info").fadeOut();
+			$(".person-number-board").hide();
          }
       }
 
@@ -183,6 +201,7 @@ $(function(){
 		}
 	};
 	   
+	   	/*
 	function drawStage(n){
 		switch (n){
 			case 0:
@@ -213,7 +232,91 @@ $(function(){
 				$(".fixed-holder").css({"z-index": "3"});
 				break;
 		}
+	}*/
+
+	function drawStage(n){
+		switch (n){
+			case 0:
+				$(".square").css({"opacity":"1"});
+				$("#square-holder-2").show();
+				$("#square-holder-2").addClass("before");
+				$("#square-holder").hide();
+				$(".person-number-board .value").html(1430);
+
+				break;
+			case 1:  //1430명
+				$("#square-holder-2").show();
+				$("#square-holder").hide();
+				$("#square-holder-2").removeClass("before");
+
+				$(".person-number-board .value").html(1430);
+
+				break;
+			case 2:  // 204명
+				$("#square-holder-2").hide();
+				$("#square-holder").fadeIn(1000);
+				$(".person-number-board .value").html(204);
+				break;
+			case 3:  // 45명
+				$("#square-holder-2").hide();
+				$("#square-holder").show();
+			  	$("#square-holder .square").css({"opacity":"0.2"});
+				$("#square-holder .elected").css({"opacity":"1"});  
+				$(".person-number-board .value").html(45);
+				break;
+			case 4: //15명
+				$("#square-holder-2").hide();
+				$("#square-holder").show();
+				$("#square-holder .elected").css({"opacity":"0.2"});
+				$("#square-holder .steps").css({"opacity":"1"});  
+				$(".person-number-board .value").html(15);
+				break;
+			case 5: //현재동의
+				$("#square-holder-2").hide();
+				$("#square-holder").show();
+				$(".steps").css({"opacity":"0.2"});
+				$(".final").css({"opacity":"1"});
+
+				$(".person-number-board .value").html(22);
+
+
+				$(".notElected").removeClass("squareHidden");
+				$(".section-graphic").css({"margin-top": "-187px"});
+
+				break;
+
+			case 6: //이전 45명
+				$(".notElected").addClass("squareHidden");
+				$(".section-graphic").css({"margin-top": "-50px"});
+				$("#square-holder .elected").css({"opacity":"0.2"});
+
+				$(".person-number-board .value").html("");
+				$(".fixed-holder").css({"z-index": "1"});
+				$(".graphic-nar").fadeOut();
+				$("#square-holder").stop().animate({"left":"-15em"}, 500);
+				$("#square-holder").removeClass("scaleUp");
+				break;
+
+			case 7: //클릭
+				$(".notElected").addClass("squareHidden");
+				$(".section-graphic").css({"margin-top": "-50px"});
+				$("#square-holder .elected").css({"opacity":"1"});
+
+				$(".person-number-board .value").html("");
+				$(".graphic-nar").fadeIn();
+				$(".fixed-holder").css({"z-index": "3"});
+
+				$("#square-holder").stop().animate({"left":"0"}, 500,"swing");
+				$("#square-holder").addClass("scaleUp");
+				
+				break;
+
+
+
+		}
 	}
+
+
 
 	//    function positionSquare(){
 	// 		var $sq = $(".elected");
