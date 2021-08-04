@@ -324,11 +324,20 @@ font-family: 'Noto Sans KR', 'notokr-regular', 'Apple SD Gothic Neo','맑은 고
 border-radius: 5px; width: 50%; position: relative; left: 50%;}
 .spacer .text-box p { font-size: 20px; margin: 10px auto; text-align: left;  font-size: 18.5px;line-height: 1.6;}
 
-
-.person-number-board { position: absolute; top: 50px; right: 20px; display:none;}
+.person-number-board { position: absolute; top: 50px; right: 20px; display:none; }
 .person-number-board p { text-align: right; }
-.person-number-board p span {  color:#222; font-size: 60px;font-family: 'Noto Serif KR', 'notokr-regular';  opacity:0.7;  padding-right: 5px; letter-spacing: -0.05em;}
-.desc-holder { display:none;}
+.person-number-board .value {  color:#222; font-size: 60px;font-family: 'Noto Serif KR', 'notokr-regular';  opacity:0.7;  padding-right: 5px; letter-spacing: -0.05em;}
+.desc-holder p span { text-align: left; }
+.desc-step2 { font-size: 12px; opacity: 0.8;}
+.circle-box { display: flex; margin: 5px 0;}
+.circle-box p span { margin: 0 3px;}
+.circle { border-radius: 40%; width: 20px; height: 20px;}
+.circle-1 { background: #eeb612;}
+.circle-2 { background: #0091a4;}
+.circle-3 { background: #00b09a;}
+.circle-4 { background: #ee6915;}
+.circle-5 { background: #ee3a46;}
+.circle-6 { background: #7d7870;}
 
 .section-graphic .squareHidden { position: absolute; top: 0; left:-3000px; opacity: 0 !important; visibility: hidden ;}
 .square.party1 { background: #0091a4;}
@@ -376,12 +385,10 @@ border-radius: 5px; width: 50%; position: relative; left: 50%;}
 
 .hideme { opacity:0;}
 
-.interview-box { width: 50%; height: auto; position: relative; margin: 0 auto; display:flex; align-items: center; }
-.interview-box-left {width: 50%; position: relative; display: block; margin-right: 5px;}
-.interview-vid { width: 100%; max-width: 350px; height: 500px; margin: 0 auto; background: white; position: relative;}
-.interview-name { width: 100%; margin-top: 5px;}
-.interview-box-right {width: 50%; position: relative; display: block; margin-left: 5px;}
-.interview-talk {font-size: 20px; padding: 10px;}
+.interview-box { width: 50%; height: auto; position: relative; margin: 0 auto; align-items: center; }
+.interview-vid { width: 100%; min-width: 500px; height: 400px; margin: 0 auto; background: white; position: relative;}
+.interview-name { margin-top: 5px;}
+.interview-talk {font-size: 20px; margin: 20px 0;}
 
 /*****footer*****/
 .footer-area {  background:#fff;  margin-top: 100px;  box-shadow: 0px -15px 20px rgba(0,0,0,0.05); border-top: 1px solid #cdd1d6;

@@ -256,6 +256,7 @@ $(function(){
 				$("#square-holder-2").hide();
 				$("#square-holder").fadeIn(1000);
 				$(".person-number-board .value").html(204);
+				$("#square-holder .square").css({"opacity":"1"});  
 				break;
 			case 3:  // 45명
 				$("#square-holder-2").hide();
@@ -289,6 +290,7 @@ $(function(){
 				$(".notElected").addClass("squareHidden");
 				$(".section-graphic").css({"margin-top": "-50px"});
 				$("#square-holder .elected").css({"opacity":"0.2"});
+				$(".final").css({"opacity":"1"});
 
 				$(".person-number-board .value").html("");
 				$(".fixed-holder").css({"z-index": "1"});
