@@ -157,6 +157,7 @@ $(function(){
          //   console.log("맵영역이후");
             $(".fixed-holder").removeClass("fixed-holder-on");
             $(".fixed-holder").addClass("fixed-holder-bottom");
+			$(".people-info").fadeOut();
          }
       }
 
@@ -199,7 +200,7 @@ $(function(){
 				$(".steps").css({"opacity":"0.2"});
 				$(".final").css({"opacity":"1"});
 				$(".notElected").removeClass("squareHidden");
-				$(".section-graphic").css({"margin-top": "-280px"});
+				$(".section-graphic").css({"margin-top": "-187px"});
 
 				$(".graphic-nar").fadeOut();
 				$(".fixed-holder").css({"z-index": "1"});
@@ -210,12 +211,6 @@ $(function(){
 				$(".graphic-nar").fadeIn();
 				
 				$(".fixed-holder").css({"z-index": "3"});
-				break;
-			case 5:
-				$('.case-box-01').fadeIn();
-				break;
-			case 6:
-				$('.case-box-01').fadeOut();
 				break;
 		}
 	}
