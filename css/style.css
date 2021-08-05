@@ -367,11 +367,19 @@ border-radius: 5px; width: 50%; position: relative; left: 50%;}
 .people-agree {margin-left: 0;}
 .people-get {margin: 5px;}
 
+.case_2005 { width: 100%; height: 100vh;}
+.num_report {width: 100%; height: 100vh; position:relative;}
+/* .report_text { width: auto; height: auto; margin: 10px; padding: 10px; background: white;} */
+.icon-path { fill: url(#iconGrad1);}
+.icon-pun-2 { fill: url(#iconGrad2); stroke: #fff;}
+.icon-ind-2 { fill: url(#iconGrad3); stroke: #fff;}
+.icon-rp-2 { fill:url(#iconGrad4); stroke: #fff;}
+
 .timeline { width: 100%; position: relative;  padding-bottom: 50px; }
 .mainline { width: 2px; height: 100%; position: absolute; left: 50%; margin: 0 0 0 -1px; background: #282828;}
 .case-01 {margin-top: 150px; position: relative;}
 
-.case-left-box { width: 50%; min-width: 300px; position: relative; }
+.case-left-box { width: 50%; min-width: 300px; position: relative; text-align: right;}
 .case-left-box .case-text-box {top: 100px; width: 50%; margin-left: auto; position: relative;}
 .middleline { width: 100%; height: 1px; margin: 10px 0; background: #282828;}
 .case-para { font-family: 'Noto Serif KR',  'notokr-regular';}
@@ -379,15 +387,15 @@ border-radius: 5px; width: 50%; position: relative; left: 50%;}
 .case-left-box .case-para { width: 80%; margin-right: auto; text-align: left;}
 
 .case-photo-box { min-width: 300px; top: 30px; position: relative;}
-.case-photo img { width: 100%;}
+.case-photo img { width: 80%;}
 
-.case-right-box { width: 50%; min-width: 300px; position: relative; }
+.case-right-box { width: 50%; min-width: 300px; position: relative; text-align: left;}
 .case-right-box .case-text-box {top: 100px; width: 50%; margin-right: auto; position: relative;}
 .case-right-photo {min-width: 300px; margin-right: auto; position: relative;}
 .case-right-box .case-year { font-size: 30px; text-align: right; font-weight: 500;}
 .case-right-box .case-para { width: 80%; margin-left: auto; text-align: right;}
 
-.each-case { height:70vh; display: flex; overflow: hidden;}
+.each-case { height:60vh; display: flex; overflow: hidden;}
 
 .hideme { opacity:0;}
 

@@ -196,7 +196,19 @@ $(function(){
 			}
 		});
 
+		$pun = $(".icon-pun");
+		$ind = $(".icon-ind");
+		$rp = $(".icon-rp");
 
+		if (nowScroll >= $(".num_report").offset().top - 300){
+			$pun.attr("class", 'icon-path icon-pun icon-rp-2');
+			$ind.attr("class", 'icon-path icon-ind icon-rp-2');
+			$rp.attr("class", 'icon-path icon-rp icon-rp-2');
+		} else {
+			$pun.attr("class", 'icon-path icon-pun');
+			$ind.attr("class", 'icon-path icon-ind');
+			$rp.attr("class", 'icon-path icon-rp');
+		}
       checkMapStage(nowScroll);
    	});
 
@@ -212,39 +224,6 @@ $(function(){
 		  	console.log(mapStage);
 		}
 	};
-	   
-	   	/*
-	function drawStage(n){
-		switch (n){
-			case 0:
-				$(".square").css({"opacity":"1"});
-				break;
-			case 1: 
-			  	$(".square").css({"opacity":"0.2"});
-				$(".elected").css({"opacity":"1"});  
-				break;
-			case 2:
-				$(".elected").css({"opacity":"0.2"});
-				$(".steps").css({"opacity":"1"});  
-				break;
-			case 3:
-				$(".steps").css({"opacity":"0.2"});
-				$(".final").css({"opacity":"1"});
-				$(".notElected").removeClass("squareHidden");
-				$(".section-graphic").css({"margin-top": "-187px"});
-
-				$(".graphic-nar").fadeOut();
-				$(".fixed-holder").css({"z-index": "1"});
-				break;
-			case 4:
-				$(".notElected").addClass("squareHidden");
-				$(".section-graphic").css({"margin-top": "-50px"});
-				$(".graphic-nar").fadeIn();
-				
-				$(".fixed-holder").css({"z-index": "3"});
-				break;
-		}
-	}*/
 
 	function animateValue(id, start, end, duration) {
 		var range = end - start;
@@ -382,23 +361,6 @@ $(function(){
 		}
 	}
 
-
-
-	//    function positionSquare(){
-	// 		var $sq = $(".elected");
-	// 		var maxlineNum = $(".section-graphic").width()/($(".section-graphic .square").width()+2);
-	// 		maxlineNum = parseInt(maxlineNum);
-
-	// 		for(s=0;s<$sq.length;s++){
-	// 			var posX = (s % maxlineNum) * ($(".section-graphic .square").width()+2);
-	// 			console.log(posX);
-	// 			var posY = (s / maxlineNum).toFixed(0) * ($(".section-graphic .square").height()+2);
-	// 			console.log(posY);
-	// 			$sq.eq(s).css({"position": "absolute", "top": posY + "px", "left": posX + "px"});
-	// 		}
-
-	//    }
-	
 	function checkMapStage(n){
 		var $StagePoint = $(".fixed-animation .spacer");
 		if( n < $StagePoint.eq(0).offset().top){ 
@@ -413,14 +375,6 @@ $(function(){
 			}
 		}
 	}
-	   
-	   /*
-	   document.getElementsByClassName("elected").addEventListener("click", function() {
-			var thisIndex = $(this).index();
-			console.log(thisIndex);
-	   });*/
-	   
-
 
 	$(".case-box").each(function(){
 		$(this).css({"top": (screenHeight-$(this).height())/2+"px"});
@@ -493,7 +447,92 @@ $(function(){
    });
 
    
+   function spreadIcon(){
+		// removeIcon();
+		var width = 600,
+		height= 500,
+		margin= 10;
+		var icon_num = 300;
+		var icon_rp_num = icon_num * 0.1;
+		var icon_ind_num =  icon_rp_num * 0.41;
+		var icon_pun_num = icon_ind_num * 0.265;
+		var path = womenList;
+		var icon_width = 10, icon_height = 27;
 
+		
+		var icon_svg = d3.select("#ICON_HOLDER svg")
+		.attr("width", width +"px" )
+		.attr("height", height +"px")
+
+		var icon_holder = icon_svg.append("g")
+		.attr("class","icon_holder");
+
+		var each_group = icon_holder.append("g")
+		.attr("class", "each-g");
+
+		for(i=0; i<icon_num; i++){
+			var g = each_group.append("g")
+				.attr("class", "icon")
+				.attr("transform", function() {
+					var icon_Wmargin = icon_width + 10;
+					var icon_Hmargin = icon_height + 12;
+					var maxlineNum = width / icon_Wmargin;
+					var x = Math.floor((i % maxlineNum)) * icon_Wmargin;
+					var y = Math.floor((i / maxlineNum)) * icon_Hmargin;
+					return "translate(" + x + "," + y + ")";
+				}).style("width", icon_width)
+				.style("height", icon_height)
+				.style("opacity","1")
+			var iconPath = g.append("path")
+				.attr("class", function(){
+					var classStr = "";
+					console.log(icon_num-Math.floor(icon_pun_num));
+					if ((icon_num-Math.floor(icon_pun_num)) <= i) {
+						classStr = "icon-path icon-pun"
+					} else if ((icon_num-Math.floor(icon_ind_num)) <= i){
+						classStr = "icon-path icon-ind"
+					} else if ((icon_num-Math.floor(icon_rp_num)) <= i){
+						classStr = "icon-path icon-rp"
+					} else{
+						classStr = "icon-path"
+					}
+					return classStr;
+				})
+				.attr("d", function(i) {
+					var n = randomRange(0, 3);
+					return path[n].path;
+				})
+
+		}
+
+		
+		
+	}
+	// function positionPeople(){
+	// 	var $sq = $(".icon");
+	// 	// var maxlineNum = $(".section-graphic").width()/($(".section-graphic .square").width()+2);
+	// 	var maxlineNum = 10;
+	// 	maxlineNum = parseInt(maxlineNum);
+
+	// 	for(s=0;s<$sq.length;s++){
+	// 		// icon_width = 10 + 2
+	// 		var posX = (s % maxlineNum) * 12;
+	// 		console.log(posX);
+	// 		// icon_height = 27 + 2
+	// 		var posY = (s / maxlineNum).toFixed(0) * 29;
+	// 		console.log(posY);
+	// 		$sq.eq(s).css({"transform": "translate(" + posX + "," + posY + ")"});
+	// 	}
+
+	// }
+	spreadIcon();
+   	// positionPeople();
+ 
+ 
+//  function removeIcon(){
+// 	d3.select("#ICON_SPREADING_HOLDER").select(".icon_holder").remove();
+//  }   
+ /******** 검색영역 아이콘  ********/
 	   
 });
 
