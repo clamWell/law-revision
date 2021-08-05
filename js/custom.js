@@ -143,6 +143,16 @@ $(function(){
 		};*/
 		   
 	};
+
+	var colors = {
+		"정의당": "#eeb612", 
+		"더불어민주당": "#0091a4",
+		"더불어시민당": "#00b09a",
+		"미래통합당": "#ee3a46",
+		"민중당": "#ee6915"
+	}
+
+
 	makeFakeSquare();
 	makeSquare();
 	var stage = "before";
@@ -191,12 +201,14 @@ $(function(){
    	});
 
 	   
-	var mapStage;
+	var mapStage = 0;
+	var mapStage_before;
 	function adjustStage(g){
 		if( mapStage == g){
 		}else if( mapStage !==g ){
+			mapStage_before = mapStage;
 			mapStage = g;
-			drawStage(mapStage);
+			drawStage(mapStage, mapStage_before);
 		  	console.log(mapStage);
 		}
 	};
@@ -234,45 +246,97 @@ $(function(){
 		}
 	}*/
 
-	function drawStage(n){
+	function animateValue(id, start, end, duration) {
+		var range = end - start;
+		var current = start;
+		var increment = end > start ? 1 : -1;
+		var stepTime = Math.abs(Math.floor(duration / range));
+		var obj = document.getElementById(id);
+		var timer = setInterval(function(){
+			  current = Number((current + increment).toFixed(1));
+			  obj.innerHTML = current;
+			  if (current == Math.floor(end)) {
+				 increment = increment / 10;
+			  }
+			  if (current == end) {
+				 clearInterval(timer);
+			  }
+		   }, stepTime);
+	 }
+
+	function drawStage(n, n_before){
+		var reverse = (n - n_before>0)? false : true;
+
 		switch (n){
 			case 0:
+				$("#square-holder-2").css({"top": - ($("#square-holder-2").height() / 2)});
 				$(".square").css({"opacity":"1"});
 				$("#square-holder-2").show();
 				$("#square-holder-2").addClass("before");
 				$("#square-holder").hide();
 				$(".person-number-board .value").html(1430);
+				$("#square-holder").removeClass("scaleUp");
 
 				break;
 			case 1:  //1430명
+				
+				if (reverse) {
+					animateValue("score", 1330, 1430, 20);
+				} else {
+					$(".person-number-board .value").html(1430);
+				}
+				$("#square-holder-2").css({"top": - ($("#square-holder-2").height() / 2)});
 				$("#square-holder-2").show();
 				$("#square-holder").hide();
 				$("#square-holder-2").removeClass("before");
-
-				$(".person-number-board .value").html(1430);
+				$("#square-holder").removeClass("scaleUp");
 
 				break;
 			case 2:  // 204명
+				if (reverse) {
+					animateValue("score", 100, 204, 20);
+				} else {
+					animateValue("score", 300, 204, 20);
+				}
 				$("#square-holder-2").hide();
+				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
 				$("#square-holder").fadeIn(1000);
 				$(".person-number-board .value").html(204);
-				$("#square-holder .square").css({"opacity":"1"});  
+				$("#square-holder .square").css({"opacity":"1"});
+				$("#square-holder").removeClass("scaleUp");
 				break;
 			case 3:  // 45명
+				if (reverse) {
+					animateValue("score", 15, 45, 200);
+				} else {
+					animateValue("score", 145, 45, 20);
+				}
 				$("#square-holder-2").hide();
 				$("#square-holder").show();
 			  	$("#square-holder .square").css({"opacity":"0.2"});
 				$("#square-holder .elected").css({"opacity":"1"});  
 				$(".person-number-board .value").html(45);
+				$("#square-holder").removeClass("scaleUp");
 				break;
 			case 4: //15명
+				if (reverse) {
+					animateValue("score", 22, 15, 300);
+				} else {
+					animateValue("score", 45, 15, 200);
+				}
 				$("#square-holder-2").hide();
 				$("#square-holder").show();
 				$("#square-holder .elected").css({"opacity":"0.2"});
 				$("#square-holder .steps").css({"opacity":"1"});  
 				$(".person-number-board .value").html(15);
+				$("#square-holder").removeClass("scaleUp");
 				break;
 			case 5: //현재동의
+				if (reverse) {
+					animateValue("score", 10, 22, 300);
+				} else {
+					animateValue("score", 15, 22, 300);
+				}
 				$("#square-holder-2").hide();
 				$("#square-holder").show();
 				$(".steps").css({"opacity":"0.2"});
@@ -282,13 +346,13 @@ $(function(){
 
 
 				$(".notElected").removeClass("squareHidden");
-				$(".section-graphic").css({"margin-top": "-187px"});
-
+				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
+				$("#square-holder").removeClass("scaleUp");
 				break;
 
 			case 6: //이전 45명
 				$(".notElected").addClass("squareHidden");
-				$(".section-graphic").css({"margin-top": "-50px"});
+				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
 				$("#square-holder .elected").css({"opacity":"0.2"});
 				$(".final").css({"opacity":"1"});
 
@@ -301,7 +365,7 @@ $(function(){
 
 			case 7: //클릭
 				$(".notElected").addClass("squareHidden");
-				$(".section-graphic").css({"margin-top": "-50px"});
+				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
 				$("#square-holder .elected").css({"opacity":"1"});
 
 				$(".person-number-board .value").html("");
@@ -366,7 +430,54 @@ $(function(){
 		$(this).css({"border": "1px solid #282828"});
 		var thisIndex = $(this).index();
 		var persondata = commmitteeList[thisIndex];
-		console.log(thisIndex);
+
+		$postColor = $(".people-info-post");
+		$post = $(".people-info");
+		switch (persondata.party) {
+			case "더불어민주당":
+				$postColor.css({"background": colors.더불어민주당});
+				$post.css({"border-bottom": "2px solid" + colors.더불어민주당});
+				break;
+			case "정의당":
+				$postColor.css({"background": colors.정의당});
+				$post.css({"border-bottom": "2px solid" + colors.정의당});
+				break;
+			case "더불어시민당":
+				$postColor.css({"background": colors.더불어시민당});
+				$post.css({"border-bottom": "2px solid" + colors.더불어시민당});
+				break;
+			case "민중당":
+				$postColor.css({"background": colors.민중당});
+				$post.css({"border-bottom": "2px solid" + colors.민중당});
+				break;
+			case "미래통합당":
+				$postColor.css({"background": colors.미래통합당});
+				$post.css({"border-bottom": "2px solid" + colors.미래통합당});
+				break;
+			default:
+				$postColor.css({"background": "#7d7870"});
+				$post.css({"border-bottom": "2px solid #7d7870"});
+		}
+
+		// console.log(persondata.elected)
+		if (persondata.elected == "O") {
+			$(".people-agree-YorN").attr("src", "img/rec.png");
+		} else {
+			$(".people-agree-YorN").attr("src", "img/close.png");
+		}
+		
+		if (persondata.steps == "O") {
+			$(".people-raise-YorN").attr("src", "img/rec.png");
+		} else {
+			$(".people-raise-YorN").attr("src", "img/close.png");
+		}
+
+		if (persondata.final == "O") {
+			$(".people-final-YorN").attr("src", "img/rec.png");
+		} else {
+			$(".people-final-YorN").attr("src", "img/close.png");
+		}
+
 		$(".people-info").fadeIn();
 		$(".people-info-name").text(persondata.name);
 		$(".people-info-party").text(persondata.party);
@@ -380,6 +491,9 @@ $(function(){
 		$(".people-info-back").hide();
 		$(".square").css({"border": "none"});
    });
+
+   
+
 	   
 });
 

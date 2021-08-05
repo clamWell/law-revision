@@ -299,14 +299,14 @@ font-family: 'Noto Sans KR', 'notokr-regular', 'Apple SD Gothic Neo','맑은 고
 .fixed-holder { width: 100%; height:100vh; position: absolute; top: 0; left: 0; z-index:1; }
 .fixed-holder-on {position: fixed; top:0;}
 .fixed-holder-bottom {position: absolute; top: auto; bottom:0; }
-.section-graphic { position: relative; top: 50%; margin-top: -187px;    z-index: 0;}
+.section-graphic { position: relative; top: 50%; z-index: 0;}
 .section-graphic .square {box-sizing: border-box; transition:all 0.5s ease 0s; margin: 1px 1px; 
   width: 20px; height: 20px; display: inline-block; float: left; border-radius: 40%;}
 .section-graphic .fakeSquare { background: #afa79a; }
 .flow-holder { position: relative; z-index:2; }
 #square-holder-2 { transition: all 0.7s ease-in-out; position: relative; display:block;position: absolute; top:0;left:0; z-index:1; opacity:1; filter:none; transform: scale(1); }
 #square-holder-2.before { transform: scale(0.85); opacity: 0.5;filter: blur(2px); }
-#square-holder { display:none; z-index:2;max-width: 264px;margin: 0 auto; position: relative; left:-15em; }
+#square-holder { display:none; z-index:2;max-width: 264px;margin: 0 auto; position: relative; left:-15em; top: 0;}
 #square-holder::after { clear:both; content:""; display:block; } 
 #square-holder.scaleUp { transform: scale(2); transform-origin: center;  }
 /*#square-holder.scaleUp .elected { width: 40px; height: 40px; }*/
@@ -347,16 +347,25 @@ border-radius: 5px; width: 50%; position: relative; left: 50%;}
 .square.party5 { background: #eeb612;}
 .square.party6 { background: #7d7870;}
 
-.people-info { width: 30%; margin: 10px; display: none; position: absolute;  bottom: 50px; right: 50px; border-top: 1px solid #282828; border-bottom: 1px solid #282828; 
-  z-index: 2; }
-.people-info-box { display: flex; padding: 5px; background: white;}
-.people-left { margin: 5px; }
+.people-info { width: 370px; margin: 10px; display: none; position: absolute;  bottom: 50px; right: 50px; 
+  border-bottom: 2px solid #282828; z-index: 2; }
+.people-info-post { width: 120px; height: 20px; margin-left: auto; padding: 5px 5px 10px 5px; background: #0091a4; color: white; border-radius: 10px 10px 0 0;}
+.people-info-box { display: flex; background: white;}
+.people-left { margin: 15px 5px 15px 15px; }
 .people-info-profile img { width: 100px; height: 150px;}
-.people-right-up { display: flex; margin: 5px;}
-.people-right-up-right { text-align: left; margin-left: 5px;}
-.people-info-name { font-size: 35px; font-weight: 400; min-width: 130px;}
+.people-right {margin: 10px 10px 10px 15px;}
+.people-right-up { display: flex; margin-bottom: 5px; }
+.people-right-up-right { text-align: left; }
+.people-info-name { font-size: 35px; font-weight: 400; min-width: 130px; text-align: left;}
 .people-info-legion { opacity: 60%;}
 .people-info-back { width: 100%; height: 100%; z-index: 1; position: fixed; display: none; top: 0; left: 0;}
+
+.people-title {font-size: 20px; text-align: left; opacity: 0.8;}
+.people-YorN {display: flex;}
+.people-menu {margin: 0 5px;}
+.people-menu img {width:30px; padding: 2px; }
+.people-agree {margin-left: 0;}
+.people-get {margin: 5px;}
 
 .timeline { width: 100%; position: relative;  padding-bottom: 50px; }
 .mainline { width: 2px; height: 100%; position: absolute; left: 50%; margin: 0 0 0 -1px; background: #282828;}
@@ -374,10 +383,7 @@ border-radius: 5px; width: 50%; position: relative; left: 50%;}
 
 .case-right-box { width: 50%; min-width: 300px; position: relative; }
 .case-right-box .case-text-box {top: 100px; width: 50%; margin-right: auto; position: relative;}
-
 .case-right-photo {min-width: 300px; margin-right: auto; position: relative;}
-
-
 .case-right-box .case-year { font-size: 30px; text-align: right; font-weight: 500;}
 .case-right-box .case-para { width: 80%; margin-left: auto; text-align: right;}
 
@@ -386,7 +392,7 @@ border-radius: 5px; width: 50%; position: relative; left: 50%;}
 .hideme { opacity:0;}
 
 .interview-box { width: 50%; height: auto; position: relative; margin: 0 auto; align-items: center; }
-.interview-vid { width: 100%; min-width: 500px; height: 400px; margin: 0 auto; background: white; position: relative;}
+.interview-vid { width: 100%; min-width: 650px; height: 400px; margin: 0 auto; background: white; position: relative;}
 .interview-name { margin-top: 5px;}
 .interview-talk {font-size: 20px; margin: 20px 0;}
 
