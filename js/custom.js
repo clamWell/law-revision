@@ -220,6 +220,12 @@ $(function(){
 			$(".report-text-ind").fadeOut();
 			$(".report-text-rp").fadeOut();
 		}
+
+		if (nowScroll >= $(".case-2019").offset().top - 250) {
+			$(".case-2019-effect").fadeIn();
+		} else {
+			$(".case-2019-effect").fadeOut();
+		}
       checkMapStage(nowScroll);
    	});
 
