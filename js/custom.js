@@ -441,7 +441,7 @@ $(function(){
 	});
 
 	$(".people-info-back").on("click", function(){
-		$(".people-info").fadeOut()
+		$(".people-info").hide();
 		$(".people-info-back").hide();
 		$(".square").css({"border": "none"});
    });
