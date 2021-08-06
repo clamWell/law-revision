@@ -406,8 +406,22 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .people-YorN::after { clear: both; content:""; display:block; }
 
 
-.case_2005 { width: 100%; height: 100vh;}
-.num_report {width: 100%; height: auto; margin: 10px 0; position:relative;padding: 30px 0; background: #fff;}
+.case-2019 { width: 100%; height: auto; background: #e1dcd5; padding: 50px 0;}
+.case-2019-text {width: auto; margin-bottom: 50px;}
+.case-2019-text p { font-size: 50px; font-weight: 600; margin-bottom: 30px; line-height: 0.7;}
+.case-text-box { width: 1200px; margin: 0 auto; text-align: left;}
+.case-2019-box { height: auto;}
+.case-2019-left { width: 540px; display: inline-block; }
+.case-2019-arrow { width: 120px; display: inline-block; }
+.arrow-img img{ width: 100px; height: 100px; margin: 10px;}
+.case-2019-right { width: 540px; display: inline-block; }
+.case-2019-menu { width: 200px; margin-right: auto; border-radius: 10px 10px 0 0; font-size: 30px; font-weight: 600; padding: 5px; background: #adaaa7; }
+.case-2019-para { width: 500px; height: auto; background: #fff; padding:20px; border-radius: 0 0 10px 0; font-family: 'Noto Serif KR', 'notokr-regular';}
+.para-title { text-align: left; font-size: 25px; font-weight: 700; margin-bottom: 20px}
+.case-2019-effect { display: none; }
+.para-yu { color:rgb(216, 28, 44);}
+
+.num_report {width: 100%; height: auto; margin: 10px 0; position:relative;padding: 30px 0; background:#e1dcd5; border-radius: 5px;}
 /* .report_text { width: auto; height: auto; margin: 10px; padding: 10px; background: white;} */
 .icon-path { fill: url(#iconGrad1);}
 .icon-pun-2 { fill: url(#iconGrad2); stroke: #fff; transition: all 0.7s ease; }
@@ -420,8 +434,8 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .report-text-03 { width: 75px;}
 .report-text-rp { display: none; text-align: left; font-size: 50px; font-weight: 600; color: rgb(106, 78, 228);}
 .text-rp {color: rgb(106, 78, 228);}
-.report-text-ind { display: none; text-align: left; font-size: 30px; font-weight: 500; color: rgb(235, 220, 88);}
-.text-ind {color: rgb(235, 220, 88);}
+.report-text-ind { display: none; text-align: left; font-size: 30px; font-weight: 550; color: rgb(57, 134, 67);}
+.text-ind {color: rgb(57, 134, 67);}
 .report-text-pun { display: none; text-align: right; font-size: 15px; font-weight: 500; color: rgb(216, 28, 44);}
 .text-pun {color: rgb(216, 28, 44);}
 
