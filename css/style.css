@@ -196,7 +196,7 @@ width: 27px; height: 30px;}
 .title-holder .page-title-sub {  max-width: 700px; margin: 20px auto; display: block;}
 .project-title { padding: 10px 0px;  margin: 0 auto; width: 350px; text-align: center; border-bottom: 1px solid #111;font-size:20px; display:none; }
 .page-title-sub-text {}
-.page-title-sub-text p {font-family: 'Noto Serif KR', 'notokr-regular'; padding: 10px 0px;  margin: 0 auto; width: 550px; text-align: center; border-top: 1px solid #111;font-size:20px;}}
+.page-title-sub-text p {font-family: 'Noto Serif KR', 'notokr-regular'; padding: 10px 0px;  margin: 0 auto; width: 550px; text-align: center; border-top: 1px solid #111;font-size:20px;}
 
 .para-holder { margin: 70px auto;  font-family: 'Noto Serif KR',  'notokr-regular'; }
 .para-holder p { font-size: 20px;  max-width: 550px; text-align: left; color: #222; margin: 20px auto;
@@ -205,6 +205,13 @@ line-height: 1.7; letter-spacing: -0.3px;  }
 .para-holder p.sm {   font-size: 16px; opacity: 0.85;}
 .para-holder p.strong { font-weight:bold;}
 .para-des {  border-top: 1px dashed #afafaf; padding-top: 50px;}
+
+.graphic-holder {margin: 50px auto; }
+.law-ex { max-width: 500px; margin: 0 auto; border-radius: 4px; background:#fff; box-sizing: border-box;padding: 30px; box-shadow: 2px 2px 0px #222;}
+.law-ex h4 { text-align: center; font-weight:bold; font-size: 18px; color:#111;  }
+.law-ex p { font-size: 16px; }
+.law-ex p u { text-decoration: underline; }
+
 
 .story-intro { display:none;}
 .story-intro .para-holder p { font-weight:300;}
@@ -296,7 +303,20 @@ font-family: 'Noto Sans KR', 'notokr-regular', 'Apple SD Gothic Neo','맑은 고
 .each-sec  { text-align:center; }
 .each-sec .section-title {  margin: 0px auto; margin-bottom: 50px; border-bottom: 1px solid #282828; padding: 30px 10px; text-align: center; width: auto; display: inline-block; } 
 .each-sec .section-title .numb {font-size: 30px; font-weight:bold;  opacity: 0.5;color: #575149;  line-height: 1.5; font-family: 'Noto Serif KR', 'notokr-regular'; }
-.each-sec .section-title .text {font-family: 'Noto Serif KR', 'notokr-regular';  font-size: 40px;line-height: 1.5;}
+.each-sec .section-title .text { font-size: 40px;line-height: 1.5;font-weight: 300;  font-family: 'Noto Sans KR'; color: #575149;}
+
+
+.table-area { width:100%; margin: 50px auto; }
+.table-title { margin-bottom: 20px; color: #5d5b59;}
+.table-holder { border:none; }
+.table-holder { border-radius: 5px;  padding: 0px 10px; width: 100%;  box-sizing: border-box;    background: #e1dcd5;}
+.tbl { width: 100%;   border: none;  box-sizing: border-box; padding:10px; }
+.tbl caption { display: none; }
+.tbl th { font-weight: bold;  color: #31343d; border: 0;  border-bottom: 2px solid #111; font-size: 15px; box-sizing: border-box; padding: 10px 10px; text-align: center; }
+.tbl td { padding: 12px 2px;  color: #5a5a65; font-size: 14.5px;  line-height: 22px; border: 0; border-top: 1px solid #b1aca2;text-align: center; }
+.tbl tr.first td { border-top: 0px; }
+.tbl td.red { color: #ca0000; font-weight: bold; }
+
 
 .fixed-animation { width: 100%; position: relative;}
 .fixed-holder { width: 100%; height:100vh; position: absolute; top: 0; left: 0; z-index:1; }
@@ -328,6 +348,16 @@ border-radius: 5px; width: 45%; position: relative; left: 50%;}
 .spacer .text-box p { font-size: 20px; margin: 10px auto; text-align: left;  font-size: 17.5px;line-height: 1.6;}
 .spacer .text-box p span.tag1 { font-weight:bold; display:inline-block; box-sizing:border-box;padding: 2px 5px;
  background: #c8bdac;margin: 0px 2px; border-radius: 3px;color: #111;}
+.spacer .text-box p span.tag2 { font-weight:bold; display:inline-block; box-sizing:border-box;padding: 2px 5px;
+ background: #e3e0d8;margin: 0px 2px; border-radius: 3px;color: #111;}
+.spacer .text-box p span.tag3 { font-weight:bold; display:inline-block; box-sizing:border-box;padding: 2px 5px;
+ background: #e3e0d8;margin: 0px 2px; border-radius: 3px;color: #111;}
+.spacer .text-box p span.tag4 { font-weight:bold; display:inline-block; box-sizing:border-box;padding: 2px 5px;
+ background: #e3e0d8;margin: 0px 2px; border-radius: 3px;color: #111;}
+.spacer .text-box p span.tag5 { font-weight:bold; display:inline-block; box-sizing:border-box;padding: 2px 5px;
+ background: #e3e0d8;margin: 0px 2px; border-radius: 3px;color: #111;}
+
+
 
 .person-number-board { position: absolute; top: 50px; right: 20px; display:none; }
 .person-number-board p { text-align: right; }
@@ -377,7 +407,7 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 
 
 .case_2005 { width: 100%; height: 100vh;}
-.num_report {width: 100%; height: auto; margin: 10px 0; position:relative;}
+.num_report {width: 100%; height: auto; margin: 10px 0; position:relative;padding: 30px 0; background: #fff;}
 /* .report_text { width: auto; height: auto; margin: 10px; padding: 10px; background: white;} */
 .icon-path { fill: url(#iconGrad1);}
 .icon-pun-2 { fill: url(#iconGrad2); stroke: #fff; transition: all 0.7s ease; }
