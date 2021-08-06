@@ -60,9 +60,9 @@ $(function(){
 
 	}
 
-
-	$(".loading-page").fadeOut(200, function(){
-		init();
+    init();
+	$(".loading-page").fadeOut(1500, function(){
+	
 	});
 
 
