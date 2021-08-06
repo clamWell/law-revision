@@ -377,12 +377,23 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 
 
 .case_2005 { width: 100%; height: 100vh;}
-.num_report {width: 100%; height: 100vh; position:relative;}
+.num_report {width: 100%; height: auto; margin: 10px 0; position:relative;}
 /* .report_text { width: auto; height: auto; margin: 10px; padding: 10px; background: white;} */
 .icon-path { fill: url(#iconGrad1);}
-.icon-pun-2 { fill: url(#iconGrad2); stroke: #fff;}
-.icon-ind-2 { fill: url(#iconGrad3); stroke: #fff;}
-.icon-rp-2 { fill:url(#iconGrad4); stroke: #fff;}
+.icon-pun-2 { fill: url(#iconGrad2); stroke: #fff; transition: all 0.7s ease; }
+.icon-ind-2 { fill: url(#iconGrad3); stroke: #fff; transition: all 0.7s ease;}
+.icon-rp-2 { fill:url(#iconGrad4); stroke: #fff; transition: all 0.7s ease;}
+.report-text-box {height:80px;}
+.report-text { display: inline-block; }
+.report-text-01 { width: 350px; }
+.report-text-02 { width: 150px; }
+.report-text-03 { width: 75px;}
+.report-text-rp { display: none; text-align: left; font-size: 50px; font-weight: 600; color: rgb(106, 78, 228);}
+.text-rp {color: rgb(106, 78, 228);}
+.report-text-ind { display: none; text-align: left; font-size: 30px; font-weight: 500; color: rgb(235, 220, 88);}
+.text-ind {color: rgb(235, 220, 88);}
+.report-text-pun { display: none; text-align: right; font-size: 15px; font-weight: 500; color: rgb(216, 28, 44);}
+.text-pun {color: rgb(216, 28, 44);}
 
 .timeline { width: 100%; position: relative;  padding-bottom: 50px; }
 .mainline { width: 2px; height: 100%; position: absolute; left: 50%; margin: 0 0 0 -1px; background: #282828;}

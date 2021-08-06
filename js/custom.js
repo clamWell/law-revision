@@ -200,14 +200,25 @@ $(function(){
 		$ind = $(".icon-ind");
 		$rp = $(".icon-rp");
 
-		if (nowScroll >= $(".num_report").offset().top - 300){
+		if (nowScroll >= $(".num_report").offset().top - 150){
+			$pun.attr("class", 'icon-path icon-pun icon-pun-2');
+			$(".report-text-pun").fadeIn();
+		} else if ( nowScroll >= $(".num_report").offset().top - 250) {
+			$pun.attr("class", 'icon-path icon-pun icon-ind-2');
+			$ind.attr("class", 'icon-path icon-ind icon-ind-2');
+			$(".report-text-ind").fadeIn();
+		} else if ( nowScroll >= $(".num_report").offset().top - 350) {
 			$pun.attr("class", 'icon-path icon-pun icon-rp-2');
 			$ind.attr("class", 'icon-path icon-ind icon-rp-2');
 			$rp.attr("class", 'icon-path icon-rp icon-rp-2');
+			$(".report-text-rp").fadeIn();
 		} else {
 			$pun.attr("class", 'icon-path icon-pun');
 			$ind.attr("class", 'icon-path icon-ind');
 			$rp.attr("class", 'icon-path icon-rp');
+			$(".report-text-pun").fadeOut();
+			$(".report-text-ind").fadeOut();
+			$(".report-text-rp").fadeOut();
 		}
       checkMapStage(nowScroll);
    	});
@@ -450,7 +461,7 @@ $(function(){
    function spreadIcon(){
 		// removeIcon();
 		var width = 600,
-		height= 500,
+		height= 390,
 		margin= 10;
 		var icon_num = 300;
 		var icon_rp_num = icon_num * 0.1;
