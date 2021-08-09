@@ -208,7 +208,7 @@ line-height: 1.7; letter-spacing: -0.3px;  }
 
 .graphic-holder {margin: 50px auto; }
 .law-ex { max-width: 600px; margin: 0 auto; border-radius: 4px; background:#fff; box-sizing: border-box;padding: 30px; box-shadow: 2px 2px 0px #222;}
-.law-ex h4 { text-align: center; font-weight:bold; font-size: 18px; color:#111; margin-bottom:15px;}
+.law-ex h4 { text-align: center; font-weight:bold; font-size: 18px; color:#111;  color: #f4384f; margin-bottom:15px;}
 .law-ex p { font-size: 16px; }
 .law-ex p u { text-decoration: underline; }
 
@@ -311,13 +311,13 @@ font-family: 'Noto Sans KR', 'notokr-regular', 'Apple SD Gothic Neo','맑은 고
 .table-area { width:100%; margin: 50px auto; }
 .table-title { margin-bottom: 20px; color: #5d5b59;}
 .table-holder { border:none; }
-.table-holder { border-radius: 5px;  padding: 0px 10px; width: 100%;  box-sizing: border-box;    background: #fff;}
-.tbl { width: 100%;   border: none;  box-sizing: border-box; padding:10px; }
+.table-holder { border-radius: 5px;  padding: 0px 10px; width: 100%;  box-sizing: border-box;background: #fff7e8;background: linear-gradient(80deg, #fef6e7, #e1d8c7);}
+.tbl { width: 100%;   border: none;  box-sizing: border-box; padding:10px;   max-width: 1500px;  margin: 0 auto; }
 .tbl caption { display: none; }
-.tbl th { font-weight: bold;  color: #31343d; border: 0;  border-bottom: 2px solid #111; font-size: 15px; box-sizing: border-box; padding: 10px 10px; text-align: center; }
-.tbl td { padding: 12px 2px;  color: #5a5a65; font-size: 14.5px;  line-height: 22px; border: 0; border-top: 1px solid #b1aca2;text-align: center; }
+.tbl th { font-weight: bold;  color: #000f65; border: 0;  border-bottom: 2px solid #000f65; font-size: 15px; box-sizing: border-box; padding: 10px 10px; text-align: center; }
+.tbl td { padding: 12px 2px; color: #000f65; font-size: 14.5px;  line-height: 22px; border: 0; border-top: 1px solid #d4cbb7; text-align: center; }
 .tbl tr.first td { border-top: 0px; }
-.tbl td.red { color: #ca0000; font-weight: bold; }
+.tbl td.red { color: #ca0000; color:#f43b52; font-weight: bold; }
 
 
 .fixed-animation { width: 100%; position: relative;}
@@ -409,24 +409,30 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .people-YorN::after { clear: both; content:""; display:block; }
 
 
-.case-2019 { width: 100%; height: auto; background: #e1dcd5; padding: 50px 0;}
+.case-2019 { width: 100%; height: auto; background: #e1dcd5; padding: 50px 0;background: #fffcf8; background: #0d122e;}
 .case-2019-text {width: auto; margin-bottom: 50px;}
-.case-2019-text p { font-size: 28px; font-weight: 600;  line-height: 1.7;}
+.case-2019-text h3 { font-size: 24px;  font-weight: 400; color:#fff; }
+.case-2019-text p { font-size: 20px; font-weight: 300;color: #abaebc;}
 
+
+.case-2019-holder {  max-width: 1200px; margin: 20px auto; text-align:center; vertical-align: middle;}
 .case-2019-box { height: auto;}
-.case-2019-left { width: 540px; display: inline-block; }
-.case-2019-arrow { width: 120px; display: inline-block; }
-.arrow-img img{ width: 100px; height: 100px; margin: 10px;}
-.case-2019-right { width: 540px; display: inline-block; }
-.case-2019-menu { width: 200px; margin-right: auto; border-radius: 10px 10px 0 0; font-size: 30px; font-weight: 600; padding: 5px; background: #adaaa7; }
-.case-2019-para { width: 500px; height: auto; background: #fff; padding:20px; border-radius: 0 0 10px 0; font-family: 'Noto Serif KR', 'notokr-regular';}
-.para-title { text-align: left; font-size: 25px; font-weight: 700; margin-bottom: 20px}
+.case-2019-left { width: 540px; display: inline-block; vertical-align: middle; width: 40%; }
+.case-2019-arrow { width: 10%; display: inline-block; vertical-align: middle;box-sizing: border-box; padding: 30px; }
+.arrow-img { width:100%; }
+.arrow-img img{ width:100%; }
+.case-2019-right { width: 540px; display: inline-block; vertical-align: middle;  width: 40%;}
+.case-2019-menu { width: 200px; margin-right: auto; border-radius: 10px 10px 0 0; background: #f4344b;font-size: 18px;color: #fff; padding: 10px;}
+.case-2019-para {background: #fff; padding: 10px 25px; border-radius: 0 0 20px 0; }
+.case-2019-para p { font-family: 'Noto Sans KR'; text-align: left; margin: 10px 0;  color: #000b4b;}
+.case-2019-para p.para-title {  font-size: 24px; font-weight: 700; margin-bottom: 20px; text-align: center;}
 .case-2019-effect { display: none; }
-.para-yu { color:rgb(216, 28, 44);}
+.case-2019-para p.para-yu { color:rgb(216, 28, 44);}
 
-.num_report {width: 100%; height: auto; margin: 10px 0; position:relative;padding: 30px 0; background: #d4cec2; max-width: 800px; margin: 20px auto;}
-.num_report h3 { margin-bottom: 30px;font-size: 24px; font-weight: 300;color: #696662; }
+.num_report {width: 100%; height: auto; margin: 10px 0; position:relative;padding: 30px 0;    background: #fffaf1; max-width: 800px;margin: 20px auto; box-shadow: 3px 3px 0px #111;}
+.num_report h3 { margin-bottom: 30px;font-size: 24px; font-weight: 400;color: #22211f; }
 .num_report .caption {margin-top: 30px;font-size: 14px; opacity: 0.7; color: #5a574f;}
+.num_report .desc { max-width: 600px; margin: 20px auto; text-align: left; }
 /* .report_text { width: auto; height: auto; margin: 10px; padding: 10px; background: white;} */
 .icon-path { fill: url(#iconGrad1);}
 .icon-pun-2 { fill: url(#iconGrad2); stroke: #fff; transition: all 0.7s ease; }
@@ -437,12 +443,12 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .report-text-01 { width: 350px; }
 .report-text-02 { width: 150px; }
 .report-text-03 { width: 75px;}
-.report-text-rp { display: none; text-align: left; font-size: 30px; font-weight: 600; color: rgb(106, 78, 228);}
-.text-rp {color: rgb(106, 78, 228);}
-.report-text-ind { display: none; text-align: left; font-size: 26px; font-weight: 550; color: rgb(57, 134, 67);}
-.text-ind {color: rgb(57, 134, 67);}
-.report-text-pun { display: none; text-align: right; font-size: 15px; font-weight: 500; color: rgb(216, 28, 44);}
-.text-pun {color: rgb(216, 28, 44);}
+.report-text-rp { display: none;  text-align: center;font-size: 23px; font-weight: 600;color: #f4344b; }
+.text-rp {color: #f4344b;}
+.report-text-ind { display: none; text-align: left; font-size: 20px; font-weight: 550; color: #ff9800;}
+.text-ind {color: #ff9800;}
+.report-text-pun { display: none; text-align: right; font-size: 15px; font-weight: 500; color: rgb(100 0 0);}
+.text-pun {color: rgb(100 0 0);}
 
 .timeline { width: 100%; position: relative;  padding-bottom: 20px; margin: 0 auto; margin-bottom: 150px;  max-width: 1300px;}
 .mainline { width: 2px; height: 100%; position: absolute; left: 50%; margin: 0 0 0 -1px; background: #282828;}
@@ -468,12 +474,37 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .each-case { height:300px; overflow: hidden;position: relative;}
 
 
+.each-case { margin: 100px auto;height: auto; }
+.each-case-center { }
+.each-case-center .case-box { max-width: 650px; margin: 0 auto; }
+.each-case-center .case-year { text-align:center; width:100%; background:#fff9ef; font-family: 'Noto Serif KR',  'notokr-regular'; font-size: 30px;font-weight: bold;opacity: 1; color: #615a4f; line-height: 1.5; }
+.case-has-photo .case-thumb {border-top: 1px solid #111;border-bottom: 1px solid #111;}
+.case-has-photo .case-thumb img{ width:100%; }
+.each-case .case-title { text-align:center; width:100%; background:#fff9ef; background:#fff;font-family: 'Noto Serif KR',  'notokr-regular';line-height: 1.5;  color: #2b2823;  font-family: 'Noto Serif KR', 'notokr-regular'; font-size: 18px;    box-sizing: border-box;   padding: 15px;}
+.each-case .case-title p { margin: 7px 0;}
+.case-has-photo .case-title { border-bottom: 1px solid #111; }
+.each-case .case-title span.sm { font-size: 14px; opacity:0.7; }
+
+.no-photo .case-box { width: 550px; background: #fff9ef; background:#fff; border-top: 1px solid #111; border-bottom: 1px solid #111; box-sizing:border-box; padding: 10px 0; }
+.no-photo .case-year { background:#fff;}
+.no-photo .case-title { background:#fff;}
+.no-photo .case-title p {}
+
+.last-case{ margin-bottom:0;}
+
+
 .hideme { opacity:0;}
 
-.interview-box { width: 50%; height: auto; position: relative; margin: 0 auto; align-items: center; }
-.interview-vid { width: 100%; min-width: 650px; height: 400px; margin: 0 auto; background: white; position: relative;}
+.interview-box { height: auto; position: relative; margin: 0 auto; align-items: center; }
+.interview-vid { width: 100%; max-width: 900px; margin: 0 auto;position: relative;}
+.interview-vid .video-tag { width:100%; border-radius: 20px; overflow:hidden; }
+.interview-vid .video-tag video { width:100%;vertical-align: bottom; }
 .interview-name { margin-top: 5px;}
-.interview-talk {font-size: 20px; margin: 20px 0;}
+.interview-talk {font-size: 20px;max-width: 550px;margin: 0 auto;}
+.interview-talk img {   width: 400px;display: block;margin-top: 40px;}
+.para-holder .qu { font-family: 'Noto Sans KR';opacity: 0.8; font-size:18px; }
+.para-holder .anw {}
+
 
 /*****footer*****/
 .footer-area {  background:#fff;  margin-top: 100px;  box-shadow: 0px -15px 20px rgba(0,0,0,0.05); border-top: 1px solid #cdd1d6;

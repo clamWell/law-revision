@@ -316,7 +316,7 @@ $(function(){
 				break;
 			case 4: //15명
 				if (reverse) {
-					animateValue("score", 22, 15, 300);
+					animateValue("score", 14, 15, 500);
 				} else {
 					animateValue("score", 45, 15, 200);
 				}
@@ -329,16 +329,16 @@ $(function(){
 				break;
 			case 5: //현재동의
 				if (reverse) {
-					animateValue("score", 10, 22, 300);
+					animateValue("score", 10, 14, 300);
 				} else {
-					animateValue("score", 15, 22, 300);
+					animateValue("score", 15, 14, 300);
 				}
 				$("#square-holder-2").hide();
 				$("#square-holder").show();
 				$(".steps").css({"opacity":"0.2"});
 				$(".final").css({"opacity":"1"});
 
-				$(".person-number-board .value").html(22);
+				$(".person-number-board .value").html(14);
 
 
 				$(".notElected").removeClass("squareHidden");
