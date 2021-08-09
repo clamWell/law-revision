@@ -183,11 +183,11 @@ width: 27px; height: 30px;}
 
 
 .story-header {}
-.story-top-graphic { position: relative; box-sizing: border-box; padding-top: 100px;width:100%;  overflow:visible; }
+.story-top-graphic { position: relative; box-sizing: border-box; padding-top: 50px;width:100%;  overflow:visible; }
 .story-top-graphic .graphic-holder { position: relative; width:100%; }
-.story-top-graphic .graphic-holder img { display: block; margin: 0 auto; max-width: 800px; }
+.story-top-graphic .graphic-holder img { display: block; margin: 0 auto; max-width: 700px; }
 
-.story-header-text { position: relative;  margin-top: 30px;}
+.story-header-text { position: relative;  margin-top: 0px;}
 .story-header-text .title-holder {  }
 .story-header-text .title-holder h1 { font-size:0px; text-indent:-9999px;visibility:none; }
 .story-header-text .strong-des { }
@@ -502,8 +502,18 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .interview-name { margin-top: 5px;}
 .interview-talk {font-size: 20px;max-width: 550px;margin: 0 auto;}
 .interview-talk img {   width: 400px;display: block;margin-top: 40px;}
-.para-holder .qu { font-family: 'Noto Sans KR';opacity: 0.8; font-size:18px; }
+.para-holder .qu { font-family: 'Noto Sans KR';opacity: 0.8; font-size:18px;font-weight: bold; }
 .para-holder .anw {}
+
+
+.video-holder h4 { text-align: center; margin-bottom: 15px; color:#222; font-size: 20px; font-weight:bold;display:none;}
+.video-holder { width: 800px; margin: 0 auto; margin-top: 50px; margin-bottom: 150px;}
+.video-holder .video-boxing { width:100%; height: 460px; background:#111; position: relative; border: 2px solid #222;  box-shadow: 10px 10px 0px #fff; }
+.video-holder .video-desc {font-size: 15px; opacity: 0.4; width:100%; text-align: center;  padding: 20px 0;}
+.video-holder .video-boxing iframe { width: 800px; height: 460px; } 
+.blank {display: none; } 
+.video-holder .temp { color:#111; opacity: 0.8; }
+.bottom-video-title { display:block; margin: 20px auto; margin-bottom: 0px;   position: relative;top: 25px; z-index: 1;}
 
 
 /*****footer*****/
