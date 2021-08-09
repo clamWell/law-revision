@@ -618,12 +618,23 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 
 /***** 노트북 *****/
 @media screen and (max-width: 1380px) {
-
+  .story-top-graphic .graphic-holder img {max-width: 550px; }
+  .title-holder .page-title-main {max-width: 800px;}
+  .graphic-holder {margin-bottom: 0px;}
+  .section-graphic .square { width: 15px; height: 15px;}
+  .case-2019-holder {max-width: 1100px;}
+  .each-case-center .case-box { max-width: 450px;}
+  .each-case { margin: 60px auto;}
+  .each-case .case-title {font-size: 16.5px;}
+  .interview-vid {max-width: 750px;}
+  .interview-talk img { width: 350px;}
 }
 
 /***** 모바일 Portraits ****/
 @media screen and (max-width: 800px) {
 
+
+  
 .img-pc { display:none; }
 .img-m { display:block; }
 .wrap { overflow-x: hidden; }
@@ -667,6 +678,45 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 .header_tit_serial a {color: #4469B0; }
 .art_header .tit_view {   overflow: hidden;  margin-top: 4px;font-weight: normal;color: #121212; font-size: 24px; line-height: 29px;letter-spacing: -0.025em;}
 .art_header { padding-top: 10px; }
+
+
+.each-sec { padding: 20px 0;}
+.story-top-graphic .graphic-holder img { width: 90%; }
+.page-title-sub-text p {width: 100%; font-size: 18px;  word-break: keep-all; box-sizing: border-box; padding: 10px 15px;}
+.para-holder { margin: 40px auto; /* font-weight: 400; */ } 
+.para-holder p { font-size: 17.5px; box-sizing: border-box; padding: 0px 15px; }
+.table-holder { padding: 0; }
+.tbl th {padding: 10px 0px; font-size: 14px;}
+.tbl td { font-size: 13px;}
+.each-sec .section-title .text { font-size: 28px;line-height: 1.4;word-break: keep-all;}
+.each-sec .section-title { width: 80%; padding: 20px 10px;}
+.section-graphic .square { width: 10px; height: 10px; margin: 0.5px;}
+.spacer .text-box {left: 5%;width: 90%;padding: 15px 25px;}
+.spacer .text-box p {font-size: 16px; line-height: 1.5;}
+#square-holder {left: 0;max-width: inherit;width: 90%;}
+#square-holder.scaleUp {transform: scale(1);}
+#square-holder.scaleUp .square { width: 25px;height: 25px;margin: 1.5px;}
+.person-number-board { top: 10px;right: 10px;}
+.person-number-board .value {font-size: 45px;}
+.desc-step2{font-size: 11px;}
+.people-info {width: 95%; right: 0;}
+.people-info-box{padding: 20px; }
+.people-left {width: 20%;}
+.people-info-profile img{width: 100%;}
+.people-right {width: 80%;}
+.people-info-name {font-size: 22px;}
+.people-title { font-size: 15px;}
+.people-menu { font-size: 14px;}
+.law-ex {width: 90%; padding: 20px;}
+.case-2019-text {margin: 20px auto; width: 90%;}
+.case-2019-text h3 {font-size: 22px;}
+.case-2019-text p {font-size: 17px; word-break: keep-all;}
+.case-2019-arrow {width: 100%;padding: 10px;}
+.arrow-img img {width: 50px;transform: rotate(90deg);}
+.case-2019-left { width: 100%; }
+.case-2019-right { width: 100%; }
+.case-2019-box { box-sizing: border-box; padding: 10px;}
+.num_report h3 {margin-bottom: 20px;font-size: 20px; }
 
 
 .ref-box {  font-size: 13.5px; margin: 0px auto; border: none; padding: 12px;}

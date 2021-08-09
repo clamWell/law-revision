@@ -4,7 +4,7 @@ $(function(){
 		screenHeight = $(window).height(),
 		imgURL = "http://img.khan.co.kr/spko/storytelling/2021/lawrevision/",
 		isMobile = screenWidth <= 800 && true || false,
-		isNotebook = (screenWidth <= 1300 && screenHeight < 750) && true || false,
+		isNotebook = (screenWidth <= 1380 && screenHeight < 750) && true || false,
 		isMobileLandscape = ( screenWidth > 400 && screenWidth <= 800 && screenHeight < 450 ) && true || false;
 	window.onbeforeunload = function(){ window.scrollTo(0, 0) ;}
 	var randomRange = function(n1, n2) {
@@ -52,6 +52,7 @@ $(function(){
 
 
 	function init(){
+		spreadIcon();
         if(isMobile==true){
 
         }else{
@@ -200,14 +201,14 @@ $(function(){
 		$ind = $(".icon-ind");
 		$rp = $(".icon-rp");
 
-		if (nowScroll >= $(".num_report").offset().top - 150){
+		if (nowScroll >= $(".num_report").offset().top + ((isNotebook==true)? 0 : -150)){
 			$pun.attr("class", 'icon-path icon-pun icon-pun-2');
 			$(".report-text-pun").fadeIn();
-		} else if ( nowScroll >= $(".num_report").offset().top - 250) {
+		} else if ( nowScroll >= $(".num_report").offset().top + ((isNotebook==true)? -70 : -250)) {
 			$pun.attr("class", 'icon-path icon-pun icon-ind-2');
 			$ind.attr("class", 'icon-path icon-ind icon-ind-2');
 			$(".report-text-ind").fadeIn();
-		} else if ( nowScroll >= $(".num_report").offset().top - 350) {
+		} else if ( nowScroll >= $(".num_report").offset().top + ((isNotebook==true)? -140 : -350)) {
 			$pun.attr("class", 'icon-path icon-pun icon-rp-2');
 			$ind.attr("class", 'icon-path icon-ind icon-rp-2');
 			$rp.attr("class", 'icon-path icon-rp icon-rp-2');
@@ -355,7 +356,11 @@ $(function(){
 				$(".person-number-board .value").html("");
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".graphic-nar").fadeOut();
-				$("#square-holder").stop().animate({"left":"-15em"}, 500);
+				if (isMobile) {
+					$("#square-holder").stop().animate({"left":	"0"}, 500);
+				} else{
+					$("#square-holder").stop().animate({"left":	"-15em"}, 500);
+				}
 				$("#square-holder").removeClass("scaleUp");
 				break;
 
@@ -463,16 +468,33 @@ $(function(){
 		$(".square").css({"border": "none"});
    });
 
-   
+//    function addIconClass(i) {
+// 		var classStr = "";
+// 		var i = i*1;
+// 		// console.log(icon_num-Math.floor(icon_pun_num));
+// 		if ((icon_num-Math.floor(icon_pun_num)) <= i) {
+// 			classStr = "icon-path icon-pun"
+// 		} else if ((icon_num-Math.floor(icon_ind_num)) <= i){
+// 			classStr = "icon-path icon-ind"
+// 		} else if ((icon_num-Math.floor(icon_rp_num)) <= i){
+// 			classStr = "icon-path icon-rp"
+// 		} else{
+// 			classStr = "icon-path"
+// 		}
+
+// 		return classStr;
+//    }
+
    function spreadIcon(){
-		// removeIcon();
-		var width = 600,
-		height= 390,
-		margin= 10;
 		var icon_num = 300;
-		var icon_rp_num = icon_num * 0.1;
+		var icon_rp_num = icon_num * 0.11;
 		var icon_ind_num =  icon_rp_num * 0.41;
 		var icon_pun_num = icon_ind_num * 0.265;
+		// removeIcon();
+		var width = (isMobile==true)? screenWidth-10: 600,
+		height= 390,
+		margin= 10;
+		
 		var path = womenList;
 		var icon_width = 10, icon_height = 27;
 
@@ -491,9 +513,9 @@ $(function(){
 			var g = each_group.append("g")
 				.attr("class", "icon")
 				.attr("transform", function() {
-					var icon_Wmargin = icon_width + 10;
+					var icon_Wmargin = (isMobile)? icon_width + 5 :icon_width + 10;
 					var icon_Hmargin = icon_height + 12;
-					var maxlineNum = width / icon_Wmargin;
+					var maxlineNum = Math.floor(width / icon_Wmargin);
 					var x = Math.floor((i % maxlineNum)) * icon_Wmargin;
 					var y = Math.floor((i / maxlineNum)) * icon_Hmargin;
 					return "translate(" + x + "," + y + ")";
@@ -503,7 +525,7 @@ $(function(){
 			var iconPath = g.append("path")
 				.attr("class", function(){
 					var classStr = "";
-					console.log(icon_num-Math.floor(icon_pun_num));
+					// console.log(icon_num-Math.floor(icon_pun_num));
 					if ((icon_num-Math.floor(icon_pun_num)) <= i) {
 						classStr = "icon-path icon-pun"
 					} else if ((icon_num-Math.floor(icon_ind_num)) <= i){
@@ -542,7 +564,7 @@ $(function(){
 	// 	}
 
 	// }
-	spreadIcon();
+	
    	// positionPeople();
  
  
