@@ -245,7 +245,7 @@ var commmitteeList = [
     "legion": "비례대표",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "신현웅",
@@ -405,7 +405,7 @@ var commmitteeList = [
     "legion": "비례대표",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "이자스민",
@@ -477,7 +477,7 @@ var commmitteeList = [
     "legion": "비례대표",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "정민희",
@@ -629,7 +629,7 @@ var commmitteeList = [
     "legion": "부천시병",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "김승원",
@@ -741,7 +741,7 @@ var commmitteeList = [
     "legion": "수원시을",
     "elected": "O",
     "steps": "O",
-    "final": "O"
+    "final": "X"
   },
   {
     "name": "복기왕",
@@ -901,7 +901,7 @@ var commmitteeList = [
     "legion": "용인시병",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "조성환",
@@ -965,7 +965,7 @@ var commmitteeList = [
     "legion": "고양시병",
     "elected": "O",
     "steps": "X",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "권인숙",
@@ -973,7 +973,7 @@ var commmitteeList = [
     "legion": "비례대표",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "박은수",
@@ -997,7 +997,7 @@ var commmitteeList = [
     "legion": "비례대표",
     "elected": "O",
     "steps": "X",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "윤미향",
@@ -1005,7 +1005,7 @@ var commmitteeList = [
     "legion": "비례대표",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "이수진",
@@ -1013,7 +1013,7 @@ var commmitteeList = [
     "legion": "비례대표",
     "elected": "O",
     "steps": "O",
-    "final": "X"
+    "final": "O"
   },
   {
     "name": "정종숙",
