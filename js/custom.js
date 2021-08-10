@@ -570,15 +570,15 @@ $(function(){
    	// positionPeople();
  
 	$(".p-hover1").hover(function(){
-			$(".baeck-with14").fadeIn();
+			$(".baeck-with14").stop().fadeIn();
 		}, function() {
-			$(".baeck-with14").fadeOut();
+			$(".baeck-with14").stop().hide();
 		}
 	);
 	$(".p-hover2").hover(function(){
-		$(".ryu-with13").fadeIn();
+		$(".ryu-with13").stop().fadeIn();
 	}, function() {
-		$(".ryu-with13").fadeOut();
+		$(".ryu-with13").stop().hide();
 	}
 	);
 //  function removeIcon(){
