@@ -184,6 +184,8 @@ $(function(){
             $(".fixed-holder").removeClass("fixed-holder-on");
             $(".fixed-holder").removeClass("fixed-holder-bottom");
 			$(".person-number-board").hide();
+			$(".people-info-back").fadeOut();
+			$(".people-info").fadeOut();
          }
       }else if( nowScroll >= endPoint){
          if(stage !== "after"){
@@ -191,6 +193,7 @@ $(function(){
          //   console.log("맵영역이후");
             $(".fixed-holder").removeClass("fixed-holder-on");
             $(".fixed-holder").addClass("fixed-holder-bottom");
+			$(".people-info-back").fadeOut();
 			$(".people-info").fadeOut();
 			$(".person-number-board").hide();
          }

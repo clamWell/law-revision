@@ -414,7 +414,7 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .people-agree, .people-raise { border-right: 1px dashed #767676; }
 .people-right-down {padding: 10px;background: #f7f6f5;  box-sizing: border-box;  width: 100%; border: 1px solid #e5e2df;}
 .people-YorN::after { clear: both; content:""; display:block; }
-.people-get {font-size: 20px; font-weight: 500;}
+.people-get {font-size: 18px; font-weight: 500;}
 
 
 .case-2019 { width: 100%; height: auto; background: #e1dcd5; padding: 50px 0;background: #fffcf8; background: #0d122e;}
@@ -432,7 +432,7 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .case-2019-right { width: 540px; display: inline-block; vertical-align: middle;  width: 40%;}
 .case-2019-menu { width: 200px; margin-right: auto; border-radius: 10px 10px 0 0; background: #f4344b;font-size: 18px;color: #fff; padding: 10px;}
 .case-2019-para {background: #fff; padding: 10px 25px; border-radius: 0 0 20px 0; }
-.case-2019-para p { font-family: 'Noto Serif KR',  'notokr-regular'; text-align: left; margin: 10px 0;  color: #000b4b;}
+.case-2019-para p {text-align: left; margin: 10px 0;  color: #000b4b;}
 .case-2019-para p.para-title {  font-size: 24px; font-weight: 700; margin-bottom: 20px; text-align: center;}
 .case-2019-effect { display: none; }
 .case-2019-para p.para-yu { color:rgb(216, 28, 44);}
@@ -724,7 +724,7 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 .person-number-board .value {font-size: 45px;}
 .desc-step2{font-size: 11px;}
 .people-info {width: 95%; right: 0;}
-.people-info-box{padding: 20px; }
+.people-info-box{padding: 12px; }
 .people-left {width: 20%;}
 .people-info-profile img{width: 100%;}
 .people-right {width: 80%;}
@@ -732,6 +732,8 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 .people-title { font-size: 15px;}
 .people-menu { font-size: 14px;}
 .law-ex {width: 90%; padding: 20px;}
+.people-get { font-size: 15px; }
+
 
 .case-2019-text {margin: 20px auto; width: 90%;}
 .case-2019-text h3 {font-size: 22px;}
