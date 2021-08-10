@@ -63,10 +63,11 @@ $(function(){
 
     init();
 	$(".loading-page").fadeOut(1500, function(){
-	
+	    $("body").removeClass("fixed");
 	});
 
     function avoid100vh(){
+        $(".fixed-holder").height(screenHeight);
 		$(".spacer").height(screenHeight);
 	}
 	/******** 모바일 전용 조정 ********/

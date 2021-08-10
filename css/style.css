@@ -167,7 +167,7 @@ width: 27px; height: 30px;}
 .wrap { width:100%;  position: relative;  }
 .container {  width:100%; position: relative; overflow: hidden;}
 .top-byline {  margin: 20px auto;margin-top: 50px;}
-.top-byline .top-border p { font-family: 'Noto Sans KR'; font-size: 14px; line-height:21px;text-align: center; }
+.top-byline .top-border p { font-family: 'Noto Serif KR',  'notokr-regular'; font-size: 14px; line-height:21px;text-align: center; }
 .top-byline .top-border p strong { margin: 0px 5px; }
 .top-byline .top-border p a {color:#111;}
 .top-byline .top-border p a:hover {text-decoration: underline;}
@@ -303,7 +303,7 @@ font-family: 'Noto Sans KR', 'notokr-regular', 'Apple SD Gothic Neo','맑은 고
 .each-sec  {  box-sizing: border-box; padding: 50px 0;text-align: center; }
 .each-sec .section-title {  margin: 0px auto; margin-bottom: 50px; border-bottom: 1px solid #282828; padding: 30px 10px; text-align: center; width: auto; display: inline-block; } 
 .each-sec .section-title .numb {font-size: 30px; font-weight:bold;  opacity: 0.5;color: #575149;  line-height: 1.5; font-family: 'Noto Serif KR', 'notokr-regular'; }
-.each-sec .section-title .text { font-size: 40px;line-height: 1.5;font-weight: 300;  font-family: 'Noto Sans KR'; color: #575149;}
+.each-sec .section-title .text { font-size: 40px;line-height: 1.5;font-weight: 300;  font-family: 'Noto Serif KR',  'notokr-regular'; color: #575149;}
 
 .sec--03 { background: #efe7d8; } 
 .sec--04 { background: #fff9ef; }
@@ -431,7 +431,7 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .case-2019-right { width: 540px; display: inline-block; vertical-align: middle;  width: 40%;}
 .case-2019-menu { width: 200px; margin-right: auto; border-radius: 10px 10px 0 0; background: #f4344b;font-size: 18px;color: #fff; padding: 10px;}
 .case-2019-para {background: #fff; padding: 10px 25px; border-radius: 0 0 20px 0; }
-.case-2019-para p { font-family: 'Noto Sans KR'; text-align: left; margin: 10px 0;  color: #000b4b;}
+.case-2019-para p { font-family: 'Noto Serif KR',  'notokr-regular'; text-align: left; margin: 10px 0;  color: #000b4b;}
 .case-2019-para p.para-title {  font-size: 24px; font-weight: 700; margin-bottom: 20px; text-align: center;}
 .case-2019-effect { display: none; }
 .case-2019-para p.para-yu { color:rgb(216, 28, 44);}
@@ -509,7 +509,7 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .interview-name { margin-top: 5px;}
 .interview-talk {font-size: 20px;max-width: 550px;margin: 0 auto;}
 .interview-talk img {   width: 400px;display: block;margin-top: 40px;}
-.para-holder .qu { font-family: 'Noto Sans KR';opacity: 0.8; font-size:18px;font-weight: bold; }
+.para-holder .qu { font-family: 'Noto Serif KR',  'notokr-regular'; opacity: 0.8; font-size:18px;font-weight: bold; }
 .para-holder .anw {}
 
 
