@@ -486,7 +486,7 @@ $(function(){
 //    }
 
    function spreadIcon(){
-		var icon_num = 300;
+		var icon_num = (isMobile)? 200: 300;
 		var icon_rp_num = icon_num * 0.11;
 		var icon_ind_num =  icon_rp_num * 0.41;
 		var icon_pun_num = icon_ind_num * 0.265;
@@ -535,12 +535,14 @@ $(function(){
 					} else{
 						classStr = "icon-path"
 					}
+					console.log(i, classStr)
 					return classStr;
 				})
 				.attr("d", function(i) {
 					var n = randomRange(0, 3);
 					return path[n].path;
 				})
+			console.log(iconPath);
 
 		}
 
