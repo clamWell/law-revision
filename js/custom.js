@@ -568,19 +568,21 @@ $(function(){
 	// }
 	
    	// positionPeople();
- 
-	$(".p-hover1").hover(function(){
+	if(isMobile) {
+
+	} else {
+		$(".p-hover1").hover(function(){
 			$(".baeck-with14").stop().fadeIn();
 		}, function() {
 			$(".baeck-with14").stop().hide();
-		}
-	);
-	$(".p-hover2").hover(function(){
-		$(".ryu-with13").stop().fadeIn();
-	}, function() {
-		$(".ryu-with13").stop().hide();
+		});
+		$(".p-hover2").hover(function(){
+			$(".ryu-with13").stop().fadeIn();
+		}, function() {
+			$(".ryu-with13").stop().hide();
+		});
 	}
-	);
+	
 //  function removeIcon(){
 // 	d3.select("#ICON_SPREADING_HOLDER").select(".icon_holder").remove();
 //  }   
