@@ -353,7 +353,7 @@ font-family: 'Noto Sans KR', 'notokr-regular', 'Apple SD Gothic Neo','맑은 고
 .graphic-nar p.desc b {text-decoration: underline;}
 
 .spacer .text-box {max-width: 600px;  background: #fff;  box-sizing: border-box;  padding: 20px 30px;  box-shadow: 2px 2px 0px #3a3733;
-border-radius: 5px; width: 45%; position: relative; left: 50%;}
+border-radius: 5px; width: 45%; position: relative; left: 50%; margin: 20px 0;}
 .spacer .text-box p { font-size: 20px; margin: 10px auto; text-align: left;  font-size: 17.5px;line-height: 1.6;}
 .spacer .text-box p span.tag1 { font-weight:bold; display:inline-block; box-sizing:border-box;padding: 2px 5px;
  background: #c8bdac;margin: 0px 2px; border-radius: 3px;color: #111;}
