@@ -337,6 +337,7 @@ font-family: 'Noto Sans KR', 'notokr-regular', 'Apple SD Gothic Neo','맑은 고
 /*#square-holder.scaleUp .elected { width: 40px; height: 40px; }*/
 .elected { cursor: pointer; box-shadow: 1px 1px 0px #111;}
 
+
 .link {font-weight: 600; text-decoration: underline; color: #6660ca;}
 .link:hover { cursor: pointer;}
 .p-hover:hover { cursor: pointer; }
@@ -521,6 +522,12 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .video-holder .temp { color:#111; opacity: 0.8; }
 .bottom-video-title { display:block; margin: 20px auto; margin-bottom: 0px;   position: relative;top: 25px; z-index: 1;}
 
+.img-holder { margin: 40px auto; }
+.img-holder-col-2 {  max-width: 1300px; margin: 0 auto; }
+.img-holder-col-2 .col-holder {position: relative; width:100%; }
+.img-holder-col-2 .col-holder > img { float:left; width: 48%; margin: 0 1%; border-radius: 10px;  }
+.img-holder .caption { font-size: 15px; opacity: 0.4; width:100%; text-align: center;  padding: 20px 0;}
+.img-holder-col-2 .col-holder::after { clear:both; content:""; display:block; }
 
 /*****footer*****/
 .footer-area {  background:#fff;  margin-top: 100px;  box-shadow: 0px -15px 20px rgba(0,0,0,0.05); border-top: 1px solid #cdd1d6;
@@ -644,8 +651,8 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 .img-pc { display:none; }
 .img-m { display:block; }
 .wrap { overflow-x: hidden; }
-.interactive-header{ display:none; }
-
+.interactive-header{ height: 40px;padding: 0px 5px; }
+.interactive-header .khan_btn img { width:80px; }
 
 /* #header - GNB */
 #header { display:none;  }
@@ -685,17 +692,27 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 .art_header .tit_view {   overflow: hidden;  margin-top: 4px;font-weight: normal;color: #121212; font-size: 24px; line-height: 29px;letter-spacing: -0.025em;}
 .art_header { padding-top: 10px; }
 
+.title-holder { width:100%; }
+.title-holder .page-title-main { width: 90%; margin: 25px auto; }
 
 .each-sec { padding: 20px 0;}
-.story-top-graphic .graphic-holder img { width: 90%; }
-.page-title-sub-text p {width: 100%; font-size: 18px;  word-break: keep-all; box-sizing: border-box; padding: 10px 15px;}
+.story-top-graphic .graphic-holder{ margin-top:20px; }
+.story-top-graphic .graphic-holder img { width: 80%; }
+.page-title-sub-text p {width: 90%; font-size: 18px;  word-break: keep-all; box-sizing: border-box; padding: 10px 5px;}
 .para-holder { margin: 40px auto; /* font-weight: 400; */ } 
 .para-holder p { font-size: 17.5px; box-sizing: border-box; padding: 0px 15px; }
 .table-holder { padding: 0; }
+.table-title { font-size: 17px; }
 .tbl th {padding: 10px 0px; font-size: 14px;}
 .tbl td { font-size: 13px;}
-.each-sec .section-title .text { font-size: 28px;line-height: 1.4;word-break: keep-all;}
-.each-sec .section-title { width: 80%; padding: 20px 10px;}
+
+.img-holder-col-2 .col-holder > img { width: 95%; float:none; margin: 5px 0px; }
+.img-holder .caption {  text-align: left;  width: 100%;  box-sizing: border-box; padding: 0px 15px; font-size: 13px;  opacity: 0.5; margin-top: 10px;}
+
+
+.each-sec .section-title .text { font-size: 24px;line-height: 1.4;word-break: keep-all;}
+.each-sec .section-title { width: 100%; padding: 20px 15px;margin-bottom: 10px;border-bottom: 0;box-sizing: border-box;}
+.sec--05 .section-title .text { font-size: 21px; }
 .section-graphic .square { width: 10px; height: 10px; margin: 0.5px;}
 .spacer .text-box {left: 5%;width: 90%;padding: 15px 25px;}
 .spacer .text-box p {font-size: 16px; line-height: 1.5;}
@@ -714,17 +731,36 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 .people-title { font-size: 15px;}
 .people-menu { font-size: 14px;}
 .law-ex {width: 90%; padding: 20px;}
+
 .case-2019-text {margin: 20px auto; width: 90%;}
 .case-2019-text h3 {font-size: 22px;}
 .case-2019-text p {font-size: 17px; word-break: keep-all;}
+.case-2019-para p.para-title { margin-bottom:0; font-size:20px; }
 .case-2019-arrow {width: 100%;padding: 10px;}
 .arrow-img img {width: 50px;transform: rotate(90deg);}
 .case-2019-left { width: 100%; }
 .case-2019-right { width: 100%; }
 .case-2019-box { box-sizing: border-box; padding: 10px;}
+.num_report{ box-shadow:none;}
 .num_report h3 {margin-bottom: 20px;font-size: 20px; }
+.num_report .desc { width: 100%; box-sizing: border-box;padding: 0px 12px;color: #3f3c38; line-height: 1.6;}
+.num_report .caption {width: 100%;box-sizing: border-box; padding: 0px 10px; text-align: left;}
+.report-text-box { height: 40px; }
+.report-text { width:33%; float: left;   text-align: center; font-size: 17px;}
+.report-text-rp { font-size: 16.5px; }
+.report-text-ind{font-size: 16.5px; }
+.report-text-pun {font-size: 14.5px; display:inline;font-weight:bold;}
 
+.timeline > h3 { margin-bottom:10px; } 
+.each-case { margin: 30px auto; }
+.each-case .case-box { width: 95%; }
+.each-case-first {margin-top:50px; }
+.each-case .case-year {font-size: 24px;}
+.each-case .case-title { font-size: 16px; padding: 10px 5px;}
+.timeline {  margin-bottom: 70px; }
 
+.interview-vid .video-tag { border-radius: 0; }
+.interview-talk img { width: 320px; box-sizing:border-box; padding-left:20px; }
 .ref-box {  font-size: 13.5px; margin: 0px auto; border: none; padding: 12px;}
 .banner-area-title .project-title { font-size: 18px; }
 .section-list .art-banner {  margin-bottom: 0; padding-bottom: 30px; margin-top: 0; border-top: 1px solid #313131; }
@@ -746,7 +782,16 @@ background-size: 15px 15px; padding-right: 20px;background-position: right;  cur
 .slider-item .slider-type-name { margin-bottom: 5px; }
 .slider-item .slider-type-ment { font-size: 15px; line-height: 1.45;}
 
+.p-hover { text-decoration:none; }
 
+.video-holder h4 { font-size: 17px; }
+.video-holder {  width:100%; box-sizing: border-box; padding: 0px 15px; margin: 55px auto; }
+.video-holder .video-boxing { position: relative; height:auto; width:100%; }
+.video-holder .video-boxing p { padding-top: 120px; }
+.blank {display: block; position: relative; width:100%; height:auto; } 
+.blank img { width:100%; height:auto; }
+.video-holder iframe { position: absolute; top: 0; left:0;  }
+.video-holder .temp { font-size: 13px; }
 
 .bottom-byline { margin-top:0;}
 .rel-article { padding: 20px 15px;  box-sizing: border-box;}

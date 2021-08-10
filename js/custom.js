@@ -66,10 +66,15 @@ $(function(){
 	
 	});
 
-
+    function avoid100vh(){
+		$(".spacer").height(screenHeight);
+	}
 	/******** 모바일 전용 조정 ********/
 	if(isMobile==true){
-
+        $(".page-title-main").attr("src", "img/page-title-01-m2.png");
+         avoid100vh();
+        $(".video-boxing iframe").css({"width":$(".blank img").width(),"height": (14*(screenWidth-30)/25 )});
+        $(".interactive-header .page-title").html("비동의강간죄 발의 1년, 여전히 계류중")
 	}else{
 
 	}
@@ -398,6 +403,22 @@ $(function(){
 		}
 	}
 
+	if(isMobile) {
+
+	} else {
+		$(".p-hover1").hover(function(){
+			$(".baeck-with14").stop().fadeIn();
+		}, function() {
+			$(".baeck-with14").stop().hide();
+		});
+		$(".p-hover2").hover(function(){
+			$(".ryu-with13").stop().fadeIn();
+		}, function() {
+			$(".ryu-with13").stop().hide();
+		});
+	}
+
+
 	$(".case-box").each(function(){
 		$(this).css({"top": (screenHeight-$(this).height())/2+"px"});
 	})
@@ -468,36 +489,22 @@ $(function(){
 		$(".square").css({"border": "none"});
    });
 
-//    function addIconClass(i) {
-// 		var classStr = "";
-// 		var i = i*1;
-// 		// console.log(icon_num-Math.floor(icon_pun_num));
-// 		if ((icon_num-Math.floor(icon_pun_num)) <= i) {
-// 			classStr = "icon-path icon-pun"
-// 		} else if ((icon_num-Math.floor(icon_ind_num)) <= i){
-// 			classStr = "icon-path icon-ind"
-// 		} else if ((icon_num-Math.floor(icon_rp_num)) <= i){
-// 			classStr = "icon-path icon-rp"
-// 		} else{
-// 			classStr = "icon-path"
-// 		}
-
-// 		return classStr;
-//    }
 
    function spreadIcon(){
 		var icon_num = (isMobile)? 200: 300;
 		var icon_rp_num = icon_num * 0.11;
 		var icon_ind_num =  icon_rp_num * 0.41;
 		var icon_pun_num = icon_ind_num * 0.265;
-		// removeIcon();
-		var width = (isMobile==true)? screenWidth-10: 600,
-		height= 390,
-		margin= 10;
+        var icon_width = 10, icon_height = 27;
+		var width = (isMobile)? screenWidth-10: 600;
+        var icon_Wmargin = (isMobile)? icon_width + 5 :icon_width + 10;
+		var icon_Hmargin = icon_height + 12;
+		var maxlineNum = Math.floor(width / icon_Wmargin);
+
+		var height= (isMobile)? ( (Math.round(icon_num/maxlineNum)+1)*icon_Hmargin ): 390,
+		    margin= 10;
 		
 		var path = womenList;
-		var icon_width = 10, icon_height = 27;
-
 		
 		var icon_svg = d3.select("#ICON_HOLDER svg")
 		.attr("width", width +"px" )
@@ -513,9 +520,7 @@ $(function(){
 			var g = each_group.append("g")
 				.attr("class", "icon")
 				.attr("transform", function() {
-					var icon_Wmargin = (isMobile)? icon_width + 5 :icon_width + 10;
-					var icon_Hmargin = icon_height + 12;
-					var maxlineNum = Math.floor(width / icon_Wmargin);
+					
 					var x = Math.floor((i % maxlineNum)) * icon_Wmargin;
 					var y = Math.floor((i / maxlineNum)) * icon_Hmargin;
 					return "translate(" + x + "," + y + ")";
@@ -525,7 +530,6 @@ $(function(){
 			var iconPath = g.append("path")
 				.attr("class", function(){
 					var classStr = "";
-					// console.log(icon_num-Math.floor(icon_pun_num));
 					if ((icon_num-Math.floor(icon_pun_num)) <= i) {
 						classStr = "icon-path icon-pun"
 					} else if ((icon_num-Math.floor(icon_ind_num)) <= i){
@@ -535,57 +539,21 @@ $(function(){
 					} else{
 						classStr = "icon-path"
 					}
-					console.log(i, classStr)
+					//console.log(i, classStr)
 					return classStr;
 				})
 				.attr("d", function(i) {
 					var n = randomRange(0, 3);
 					return path[n].path;
 				})
-			console.log(iconPath);
+			
 
 		}
 
 		
 		
 	}
-	// function positionPeople(){
-	// 	var $sq = $(".icon");
-	// 	// var maxlineNum = $(".section-graphic").width()/($(".section-graphic .square").width()+2);
-	// 	var maxlineNum = 10;
-	// 	maxlineNum = parseInt(maxlineNum);
-
-	// 	for(s=0;s<$sq.length;s++){
-	// 		// icon_width = 10 + 2
-	// 		var posX = (s % maxlineNum) * 12;
-	// 		console.log(posX);
-	// 		// icon_height = 27 + 2
-	// 		var posY = (s / maxlineNum).toFixed(0) * 29;
-	// 		console.log(posY);
-	// 		$sq.eq(s).css({"transform": "translate(" + posX + "," + posY + ")"});
-	// 	}
-
-	// }
-	
-   	// positionPeople();
-	if(isMobile) {
-
-	} else {
-		$(".p-hover1").hover(function(){
-			$(".baeck-with14").stop().fadeIn();
-		}, function() {
-			$(".baeck-with14").stop().hide();
-		});
-		$(".p-hover2").hover(function(){
-			$(".ryu-with13").stop().fadeIn();
-		}, function() {
-			$(".ryu-with13").stop().hide();
-		});
-	}
-	
-//  function removeIcon(){
-// 	d3.select("#ICON_SPREADING_HOLDER").select(".icon_holder").remove();
-//  }   
+	      
  /******** 검색영역 아이콘  ********/
 	   
 });
