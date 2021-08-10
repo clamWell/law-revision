@@ -567,7 +567,18 @@ $(function(){
 	
    	// positionPeople();
  
- 
+	$(".p-hover1").hover(function(){
+			$(".baeck-with14").fadeIn();
+		}, function() {
+			$(".baeck-with14").fadeOut();
+		}
+	);
+	$(".p-hover2").hover(function(){
+		$(".ryu-with13").fadeIn();
+	}, function() {
+		$(".ryu-with13").fadeOut();
+	}
+	);
 //  function removeIcon(){
 // 	d3.select("#ICON_SPREADING_HOLDER").select(".icon_holder").remove();
 //  }   
