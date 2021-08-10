@@ -459,21 +459,25 @@ $(function(){
 
 		// console.log(persondata.elected)
 		if (persondata.elected == "O") {
-			$(".people-agree-YorN").attr("src", "img/rec.png");
+			// $(".people-agree-YorN").attr("src", "img/rec.png");
+			$(".people-agree-YorN").html("찬성");
 		} else {
-			$(".people-agree-YorN").attr("src", "img/close.png");
+			$(".people-agree-YorN").html("반대");
 		}
 		
 		if (persondata.steps == "O") {
-			$(".people-raise-YorN").attr("src", "img/rec.png");
+			// $(".people-raise-YorN").attr("src", "img/rec.png");
+			$(".people-raise-YorN").html("참여");
 		} else {
-			$(".people-raise-YorN").attr("src", "img/close.png");
+			// $(".people-raise-YorN").attr("src", "img/close.png");
+			$(".people-raise-YorN").html("불참");
 		}
 
 		if (persondata.final == "O") {
-			$(".people-final-YorN").attr("src", "img/rec.png");
+			// $(".people-final-YorN").attr("src", "img/rec.png");
+			$(".people-final-YorN").html("응답");
 		} else {
-			$(".people-final-YorN").attr("src", "img/close.png");
+			$(".people-final-YorN").html("응답없음");
 		}
 
 		$(".people-info").fadeIn();

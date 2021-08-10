@@ -414,6 +414,7 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .people-agree, .people-raise { border-right: 1px dashed #767676; }
 .people-right-down {padding: 10px;background: #f7f6f5;  box-sizing: border-box;  width: 100%; border: 1px solid #e5e2df;}
 .people-YorN::after { clear: both; content:""; display:block; }
+.people-get {font-size: 20px; font-weight: 500;}
 
 
 .case-2019 { width: 100%; height: auto; background: #e1dcd5; padding: 50px 0;background: #fffcf8; background: #0d122e;}
