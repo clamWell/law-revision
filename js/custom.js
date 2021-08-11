@@ -163,6 +163,7 @@ $(function(){
 	makeFakeSquare();
 	makeSquare();
 	var stage = "before";
+	var isChange = false;
 	$(window).scroll(function(){
       var nowScroll = $(window).scrollTop();
 
@@ -209,26 +210,28 @@ $(function(){
 		$pun = $(".icon-pun");
 		$ind = $(".icon-ind");
 		$rp = $(".icon-rp");
-
-		if (nowScroll >= $(".num_report").offset().top + ((isNotebook==true)? 0 : -150)){
-			$pun.attr("class", 'icon-path icon-pun icon-pun-2');
-			$(".report-text-pun").fadeIn();
-		} else if ( nowScroll >= $(".num_report").offset().top + ((isNotebook==true)? -70 : -250)) {
-			$pun.attr("class", 'icon-path icon-pun icon-ind-2');
-			$ind.attr("class", 'icon-path icon-ind icon-ind-2');
-			$(".report-text-ind").fadeIn();
-		} else if ( nowScroll >= $(".num_report").offset().top + ((isNotebook==true)? -140 : -350)) {
+		
+		if (nowScroll >= $(".num_report").offset().top + ((isNotebook==true)? -30 : -170) && isChange == false){
+			isChange = true;
 			$pun.attr("class", 'icon-path icon-pun icon-rp-2');
 			$ind.attr("class", 'icon-path icon-ind icon-rp-2');
 			$rp.attr("class", 'icon-path icon-rp icon-rp-2');
-			$(".report-text-rp").fadeIn();
-		} else {
+			$(".report-text-rp").stop().animate({"opacity":"1"}, 300, function(){
+				$pun.attr("class", 'icon-path icon-pun icon-ind-2');
+				$ind.attr("class", 'icon-path icon-ind icon-ind-2');
+				$(".report-text-ind").stop().animate({"opacity":"1"}, 300, function(){
+					$pun.attr("class", 'icon-path icon-pun icon-pun-2');
+						$(".report-text-pun").stop().animate({"opacity":"1"}, 300)
+				})
+			})
+		} else if (nowScroll < $(".num_report").offset().top + ((isNotebook==true)? -30 : -170) && isChange == true) {
+			isChange = false;
 			$pun.attr("class", 'icon-path icon-pun');
 			$ind.attr("class", 'icon-path icon-ind');
 			$rp.attr("class", 'icon-path icon-rp');
-			$(".report-text-pun").fadeOut();
-			$(".report-text-ind").fadeOut();
-			$(".report-text-rp").fadeOut();
+			$(".report-text-pun").stop().animate({"opacity":"0"});
+			$(".report-text-ind").stop().animate({"opacity":"0"});
+			$(".report-text-rp").stop().animate({"opacity":"0"});
 		}
 
 		if (nowScroll >= $(".case-2019").offset().top - 250) {

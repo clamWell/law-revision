@@ -451,11 +451,11 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .report-text-01 { width: 350px; }
 .report-text-02 { width: 150px; }
 .report-text-03 { width: 75px;}
-.report-text-rp { display: none;  text-align: center;font-size: 23px; font-weight: 600;color: #f4344b; }
+.report-text-rp { opacity: 0; text-align: center;font-size: 23px; font-weight: 600;color: #f4344b; }
 .text-rp {color: #f4344b;}
-.report-text-ind { display: none; text-align: left; font-size: 20px; font-weight: 550; color: #ff9800;}
+.report-text-ind { opacity: 0; text-align: left; font-size: 20px; font-weight: 550; color: #ff9800;}
 .text-ind {color: #ff9800;}
-.report-text-pun { display: none; text-align: right; font-size: 15px; font-weight: 500; color: rgb(100 0 0);}
+.report-text-pun { opacity: 0; text-align: right; font-size: 15px; font-weight: 500; color: rgb(100 0 0);}
 .text-pun {color: rgb(100 0 0);}
 
 .timeline { width: 100%; position: relative;  padding-bottom: 20px; margin: 0 auto; margin-bottom: 150px;  max-width: 1300px;}
