@@ -86,8 +86,8 @@ $(function(){
 	}
 	/******** 모바일 전용 조정 ********/
 	if(isMobile==true){
-        $(".page-title-main").attr("src", "img/page-title-01-m2.png");
-		$(".graphic-holder img").attr("src", "img/main-top-graphic-4-m.png");
+        $(".page-title-main").attr("src", "https://img.khan.co.kr/spko/storytelling/2021/lawrevision/page-title-01-m2.png");
+		$(".graphic-holder img").attr("src", "https://img.khan.co.kr/spko/storytelling/2021/lawrevision/main-top-graphic-4-m.png");
          avoid100vh();
         $(".video-boxing iframe").css({"width":$(".blank img").width(),"height": (14*(screenWidth-30)/25 )});
         $(".interactive-header .page-title").html("비동의강간죄 발의 1년, 여전히 계류중")
@@ -534,22 +534,22 @@ $(function(){
 
 		// console.log(persondata.elected)
 		if (persondata.elected == "O") {
-			// $(".people-agree-YorN").attr("src", "img/rec.png");
+			// $(".people-agree-YorN").attr("src", "https://img.khan.co.kr/spko/storytelling/2021/lawrevision/rec.png");
 			$(".people-agree-YorN").html("찬성");
 		} else {
 			$(".people-agree-YorN").html("반대");
 		}
 		
 		if (persondata.steps == "O") {
-			// $(".people-raise-YorN").attr("src", "img/rec.png");
+			// $(".people-raise-YorN").attr("src", "https://img.khan.co.kr/spko/storytelling/2021/lawrevision/rec.png");
 			$(".people-raise-YorN").html("참여");
 		} else {
-			// $(".people-raise-YorN").attr("src", "img/close.png");
+			// $(".people-raise-YorN").attr("src", "https://img.khan.co.kr/spko/storytelling/2021/lawrevision/close.png");
 			$(".people-raise-YorN").html("불참");
 		}
 
 		if (persondata.final == "O") {
-			// $(".people-final-YorN").attr("src", "img/rec.png");
+			// $(".people-final-YorN").attr("src", "https://img.khan.co.kr/spko/storytelling/2021/lawrevision/rec.png");
 			$(".people-final-YorN").html("응답");
 		} else {
 			$(".people-final-YorN").html("응답없음");
@@ -559,7 +559,7 @@ $(function(){
 		$(".people-info-name").text(persondata.name);
 		$(".people-info-party").text(persondata.party);
 		$(".people-info-legion").text(persondata.legion);
-		$(".people-photo").attr("src", "img/profile_"+ thisIndex +".jpg");
+		$(".people-photo").attr("src", "https://img.khan.co.kr/spko/storytelling/2021/lawrevision/profile_"+ thisIndex +".jpg");
 		$(".people-info-back").fadeIn();
 	});
 

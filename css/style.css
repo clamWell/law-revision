@@ -531,6 +531,8 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .img-holder .caption { font-size: 15px; opacity: 0.4; width:100%; text-align: center;  padding: 20px 0;}
 .img-holder-col-2 .col-holder::after { clear:both; content:""; display:block; }
 
+.kakao-desc { display:none;}
+
 /*****footer*****/
 .footer-area {  background:#fff;  margin-top: 100px;  box-shadow: 0px -15px 20px rgba(0,0,0,0.05); border-top: 1px solid #cdd1d6;
 position: relative; z-index: 2; margin-top: 0px; }
@@ -830,9 +832,10 @@ body.scrollOff{position:fixed;overflow:hidden;height:100%;}
 
 .inApp .section-graphic .square { transition: none;}
 .inApp .hideme { opacity:1; }
+.inApp .kakao-desc { display:block; width: 100%; box-sizing: border-box;  padding: 0px 10px; font-size: 14px;  text-align: left;}  }
+.inApp .kakao-desc p {background: #d7cfbf; box-sizing: border-box; padding: 10px;}
 
 }
-
 
 /****** 모바일 Landscape *****/
 @media (max-width: 800px) and (orientation: landscape){
