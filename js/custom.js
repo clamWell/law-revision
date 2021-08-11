@@ -294,9 +294,11 @@ $(function(){
 				$(".person-number-board .value").html(1430);
 				$("#square-holder").removeClass("scaleUp");
 
+				$(".fixed-holder").css({"z-index": "1"});
+				$(".notElected").removeClass("squareHidden");
+				$(".graphic-nar").stop().fadeOut();
 				break;
 			case 1:  //1430명
-				
 				if (reverse) {
 					animateValue("score", 1330, 1430, 20);
 				} else {
@@ -308,6 +310,9 @@ $(function(){
 				$("#square-holder-2").removeClass("before");
 				$("#square-holder").removeClass("scaleUp");
 
+				$(".fixed-holder").css({"z-index": "1"});
+				$(".notElected").removeClass("squareHidden");
+				$(".graphic-nar").stop().fadeOut();
 				break;
 			case 2:  // 204명
 				if (reverse) {
@@ -321,6 +326,10 @@ $(function(){
 				$(".person-number-board .value").html(204);
 				$("#square-holder .square").css({"opacity":"1"});
 				$("#square-holder").removeClass("scaleUp");
+
+				$(".fixed-holder").css({"z-index": "1"});
+				$(".notElected").removeClass("squareHidden");
+				$(".graphic-nar").stop().fadeOut();
 				break;
 			case 3:  // 45명
 				if (reverse) {
@@ -334,6 +343,10 @@ $(function(){
 				$("#square-holder .elected").css({"opacity":"1"});  
 				$(".person-number-board .value").html(45);
 				$("#square-holder").removeClass("scaleUp");
+
+				$(".fixed-holder").css({"z-index": "1"});
+				$(".notElected").removeClass("squareHidden");
+				$(".graphic-nar").stop().fadeOut();
 				break;
 			case 4: //15명
 				if (reverse) {
@@ -347,6 +360,10 @@ $(function(){
 				$("#square-holder .steps").css({"opacity":"1"});  
 				$(".person-number-board .value").html(15);
 				$("#square-holder").removeClass("scaleUp");
+
+				$(".fixed-holder").css({"z-index": "1"});
+				$(".notElected").removeClass("squareHidden");
+				$(".graphic-nar").stop().fadeOut();
 				break;
 			case 5: //현재동의
 				if (reverse) {
@@ -358,13 +375,15 @@ $(function(){
 				$("#square-holder").show();
 				$(".steps").css({"opacity":"0.2"});
 				$(".final").css({"opacity":"1"});
+				$(".fixed-holder").css({"z-index": "1"});
 
 				$(".person-number-board .value").html(14);
-
 
 				$(".notElected").removeClass("squareHidden");
 				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
 				$("#square-holder").removeClass("scaleUp");
+
+				$(".graphic-nar").stop().fadeOut();
 				break;
 
 			case 6: //이전 45명
@@ -373,9 +392,10 @@ $(function(){
 				$("#square-holder .elected").css({"opacity":"0.2"});
 				$(".final").css({"opacity":"1"});
 
+				$("#square-holder-2").hide();
 				$(".person-number-board .value").html("");
 				$(".fixed-holder").css({"z-index": "1"});
-				$(".graphic-nar").fadeOut();
+				$(".graphic-nar").stop().fadeOut();
 				if (isMobile) {
 					$("#square-holder").stop().animate({"left":	"0"}, 500);
 				} else{
@@ -389,8 +409,9 @@ $(function(){
 				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
 				$("#square-holder .elected").css({"opacity":"1"});
 
+				$("#square-holder-2").hide();
 				$(".person-number-board .value").html("");
-				$(".graphic-nar").fadeIn();
+				$(".graphic-nar").stop().fadeIn();
 				$(".fixed-holder").css({"z-index": "3"});
 
 				$("#square-holder").stop().animate({"left":"0"}, 500,"swing");
