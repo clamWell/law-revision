@@ -40,7 +40,7 @@ $(function(){
 			inApp = true;	
 			$("body").addClass("inApp");
 			$(".hideme").css({"opacity":"1"})
-			$(".case-2019-effect").show();
+			$(".case-2019-effect").css({"opacity":"1"})
 			return true;
 		 }else {
             return false;
@@ -427,7 +427,6 @@ $(function(){
 			case 6: //이전 45명
 				$("#square-holder-2").hide();
 				$("#square-holder").show();
-				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
 				
 				$(".notElected").addClass("squareHidden");
 				$("#square-holder .elected").css({"opacity":"0.2"});
@@ -436,6 +435,8 @@ $(function(){
 				$(".person-number-board .value").html("");
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".graphic-nar").hide();
+				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
+
 				if (isMobile) {
 					$("#square-holder").stop().animate({"left":	"0"}, 500);
 				} else{
