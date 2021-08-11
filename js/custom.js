@@ -243,9 +243,9 @@ $(function(){
 		}
 
 		if (nowScroll >= $(".case-2019").offset().top - 250) {
-			$(".case-2019-effect").fadeIn();
+			$(".case-2019-effect").stop().animate({"opacity": "1"});
 		} else {
-			$(".case-2019-effect").fadeOut();
+			$(".case-2019-effect").stop().animate({"opacity": "0"});
 		}
       checkMapStage(nowScroll);
    	});
