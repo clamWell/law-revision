@@ -33,16 +33,21 @@ $(function(){
     }
     checkIe();
 	
-	var kakao = false;
-	function checkKaKao(){
-		 if (navigator.userAgent.indexOf("KAKAOTALK") >= 0) {
-			kakao = true;
-			$("body").addClass("kakao");
+	var inApp = false;
+	function checkKApp(){
+		//$(".table-title").html(navigator.userAgent);
+		 if(navigator.userAgent.match(/inapp|NAVER|KAKAOTALK|Snapchat|Line|WirtschaftsWoche|Thunderbird|Instagram|everytimeApp|WhatsApp|Electron|wadiz|AliApp|zumapp|iPhone(.*)Whale|Android(.*)Whale|kakaostory|band|twitter|DaumApps|DaumDevice\/mobile|FB_IAB|FB4A|FBAN|FBIOS|FBSS|SamsungBrowser\/[^1]/i)){ 
+			inApp = true;	
+			$("body").addClass("inApp");
+			$(".hideme").css({"opacity":"1"})
+			$(".case-2019-effect").show();
 			return true;
 		 }else {
             return false;
         }
+		
 	}
+	checkKApp();
 	
 	/*								*/
 	/*------  INTRO ANIMATION	-----*/
@@ -76,6 +81,8 @@ $(function(){
     function avoid100vh(){
         $(".fixed-holder").height(screenHeight);
 		$(".spacer").height(screenHeight);
+		$(".loading-page").height(screenHeight);
+		$(".ie-block").height(screenHeight);
 	}
 	/******** 모바일 전용 조정 ********/
 	if(isMobile==true){
@@ -202,18 +209,26 @@ $(function(){
          //   console.log("맵영역이후");
             $(".fixed-holder").removeClass("fixed-holder-on");
             $(".fixed-holder").addClass("fixed-holder-bottom");
-			$(".people-info-back").fadeOut();
-			$(".people-info").fadeOut();
+			$(".people-info-back").hide();
+			$(".people-info").hide();
 			$(".person-number-board").hide();
          }
       }
 
-		$(".hideme").each(function(i){
-			if( $(this).hasClass("shown") == false && nowScroll + screenHeight > $(this).offset().top + $(this).outerHeight()*0.5 && kakao == false ){
-				$(this).addClass("shown")
-				$(this).stop().animate({"opacity": 1},400);
+		if(inApp == false){
+			$(".hideme").each(function(i){
+				if( $(this).hasClass("shown") == false && nowScroll + screenHeight > $(this).offset().top + $(this).outerHeight()*0.5){
+					$(this).addClass("shown")
+					$(this).stop().animate({"opacity": 1},400);
+				}
+			});
+			if (nowScroll >= $(".case-2019").offset().top - 250) {
+				$(".case-2019-effect").stop().animate({"opacity": "1"});
+			} else {
+				$(".case-2019-effect").stop().animate({"opacity": "0"});
 			}
-		});
+		}
+		
 
 		$pun = $(".icon-pun");
 		$ind = $(".icon-ind");
@@ -242,12 +257,8 @@ $(function(){
 			$(".report-text-rp").stop().animate({"opacity":"0"});
 		}
 
-		if (nowScroll >= $(".case-2019").offset().top - 250) {
-			$(".case-2019-effect").stop().animate({"opacity": "1"});
-		} else {
-			$(".case-2019-effect").stop().animate({"opacity": "0"});
-		}
-      checkMapStage(nowScroll);
+		
+		checkMapStage(nowScroll);
    	});
 
 	   
@@ -307,6 +318,7 @@ $(function(){
 				$("#square-holder-2").css({"top": - ($("#square-holder-2").height() / 2)});
 				$("#square-holder-2").show();
 				$("#square-holder").hide();
+			//	$(".person-number-board .value").html(1430);
 				$("#square-holder-2").removeClass("before");
 				$("#square-holder").removeClass("scaleUp");
 
@@ -320,16 +332,18 @@ $(function(){
 				} else {
 					animateValue("score", 300, 204, 20);
 				}
-				$("#square-holder-2").hide();
 				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
-				$("#square-holder").fadeIn(1000);
-				$(".person-number-board .value").html(204);
-				$("#square-holder .square").css({"opacity":"1"});
+				$("#square-holder-2").hide();
+				$("#square-holder").show();
+				$("#square-holder-2").removeClass("before");
 				$("#square-holder").removeClass("scaleUp");
+		
+				//$(".person-number-board .value").html(204);
+				$("#square-holder .square").css({"opacity":"1"});
 
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".notElected").removeClass("squareHidden");
-				$(".graphic-nar").stop().fadeOut();
+				$(".graphic-nar").hide();
 				break;
 			case 3:  // 45명
 				if (reverse) {
@@ -341,12 +355,12 @@ $(function(){
 				$("#square-holder").show();
 			  	$("#square-holder .square").css({"opacity":"0.2"});
 				$("#square-holder .elected").css({"opacity":"1"});  
-				$(".person-number-board .value").html(45);
+				//$(".person-number-board .value").html(45);
 				$("#square-holder").removeClass("scaleUp");
 
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".notElected").removeClass("squareHidden");
-				$(".graphic-nar").stop().fadeOut();
+				$(".graphic-nar").hide();
 				break;
 			case 4: //15명
 				if (reverse) {
@@ -358,12 +372,12 @@ $(function(){
 				$("#square-holder").show();
 				$("#square-holder .elected").css({"opacity":"0.2"});
 				$("#square-holder .steps").css({"opacity":"1"});  
-				$(".person-number-board .value").html(15);
+				//$(".person-number-board .value").html(15);
 				$("#square-holder").removeClass("scaleUp");
 
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".notElected").removeClass("squareHidden");
-				$(".graphic-nar").stop().fadeOut();
+				$(".graphic-nar").hide();
 				break;
 			case 5: //현재동의
 				if (reverse) {
@@ -377,13 +391,13 @@ $(function(){
 				$(".final").css({"opacity":"1"});
 				$(".fixed-holder").css({"z-index": "1"});
 
-				$(".person-number-board .value").html(14);
+				//$(".person-number-board .value").html(14);
 
 				$(".notElected").removeClass("squareHidden");
 				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
 				$("#square-holder").removeClass("scaleUp");
 
-				$(".graphic-nar").stop().fadeOut();
+				$(".graphic-nar").hide();
 				break;
 
 			case 6: //이전 45명
@@ -395,7 +409,7 @@ $(function(){
 				$("#square-holder-2").hide();
 				$(".person-number-board .value").html("");
 				$(".fixed-holder").css({"z-index": "1"});
-				$(".graphic-nar").stop().fadeOut();
+				$(".graphic-nar").hide();
 				if (isMobile) {
 					$("#square-holder").stop().animate({"left":	"0"}, 500);
 				} else{
@@ -418,8 +432,6 @@ $(function(){
 				$("#square-holder").addClass("scaleUp");
 				
 				break;
-
-
 
 		}
 	}
@@ -514,7 +526,7 @@ $(function(){
 		} else {
 			$(".people-final-YorN").html("응답없음");
 		}
-
+		$("body").addClass("fixed");
 		$(".people-info").fadeIn();
 		$(".people-info-name").text(persondata.name);
 		$(".people-info-party").text(persondata.party);
@@ -524,6 +536,7 @@ $(function(){
 	});
 
 	$(".people-info-back").on("click", function(){
+		$("body").removeClass("fixed");
 		$(".people-info").hide();
 		$(".people-info-back").hide();
 		$(".square").css({"border": "none"});

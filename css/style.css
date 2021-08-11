@@ -166,7 +166,7 @@ width: 27px; height: 30px;}
 
 .wrap { width:100%;  position: relative;  }
 .container {  width:100%; position: relative; }
-.top-byline {  margin: 20px auto;margin-top: 50px;}
+.top-byline {  margin: 20px auto;margin-top: 50px;   width: 100%; box-sizing: border-box;padding: 0px 10px; word-break: keep-all;}
 .top-byline .top-border p { font-family: 'Noto Serif KR',  'notokr-regular'; font-size: 14px; line-height:21px;text-align: center; }
 .top-byline .top-border p strong { margin: 0px 5px; }
 .top-byline .top-border p a {color:#111;}
@@ -507,6 +507,7 @@ cursor: url("http://img.khan.co.kr/spko/storytelling/2020/tracknroom/exit-icon-b
 .interview-vid { width: 100%; max-width: 900px; margin: 0 auto;position: relative;}
 .interview-vid .video-tag { width:100%; border-radius: 20px; overflow:hidden; }
 .interview-vid .video-tag video { width:100%;vertical-align: bottom; }
+.interview-vid > img { width:100%; border-radius: 20px; overflow:hidden;  }
 .interview-name { margin-top: 5px;}
 .interview-talk {font-size: 20px;max-width: 550px;margin: 0 auto;}
 .interview-talk img {   width: 400px;display: block;margin-top: 40px;}
@@ -724,7 +725,7 @@ body.scrollOff{position:fixed;overflow:hidden;height:100%;}
 #square-holder {left: 0;max-width: inherit;width: 90%;}
 #square-holder.scaleUp {transform: scale(1);}
 #square-holder.scaleUp .square { width: 25px;height: 25px;margin: 1.5px;}
-.person-number-board { top: 10px;right: 10px;}
+.person-number-board { top: 30px;right: 10px;}
 .person-number-board .value {font-size: 45px;}
 .desc-step2{font-size: 11px;}
 .people-info {width: 95%; right: 0;}
@@ -767,6 +768,7 @@ body.scrollOff{position:fixed;overflow:hidden;height:100%;}
 .timeline {  margin-bottom: 70px; }
 
 .interview-vid .video-tag { border-radius: 0; }
+.interview-vid > img { border-radius: 0;}
 .interview-talk img { width: 320px; box-sizing:border-box; padding-left:20px; }
 .ref-box {  font-size: 13.5px; margin: 0px auto; border: none; padding: 12px;}
 .banner-area-title .project-title { font-size: 18px; }
@@ -800,6 +802,7 @@ body.scrollOff{position:fixed;overflow:hidden;height:100%;}
 .video-holder iframe { position: absolute; top: 0; left:0;  }
 .video-holder .temp { font-size: 13px; }
 
+ 
 .bottom-byline { margin-top:0;}
 .rel-article { padding: 20px 15px;  box-sizing: border-box;}
 .rel-article .rel-box { }
@@ -818,15 +821,15 @@ body.scrollOff{position:fixed;overflow:hidden;height:100%;}
 .digital-common-byline .c-byline-border .brand-desc .desc-text { font-size: 14px; }
 .digital-common-byline .c-byline-border .brand-desc { margin-bottom: 20px; }
 .digital-common-byline .c-byline-people h3 { font-size: 15px; padding-left: 10px; border-left: 5px solid #111; line-height: 1;}
-.digital-common-byline .c-byline-people ul li { width: 50%; padding-right: 0px; min-height: 42px; }
+.digital-common-byline .c-byline-people ul li { width: 100%; padding-right: 0px; min-height: 42px; }
 .digital-common-byline .c-byline-people ul li .p-thumbs img { width: 40px; height:40px; }
 .digital-common-byline .c-byline-people ul li .p-text { font-size: 12px; }
 .digital-common-byline .c-byline-people ul li .p-text .mail {  font-size: 10px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; width: 100%;}
 /*********digital common byline*******/
 
 
-.kakao .section-graphic .square { transition: none;}
-
+.inApp .section-graphic .square { transition: none;}
+.inApp .hideme { opacity:1; }
 
 }
 
