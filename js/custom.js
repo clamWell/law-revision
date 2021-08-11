@@ -32,7 +32,18 @@ $(function(){
         }
     }
     checkIe();
-
+	
+	var kakao = false;
+	function checkKaKao(){
+		 if (navigator.userAgent.indexOf("KAKAOTALK") >= 0) {
+			kakao = true;
+			$("body").addClass("kakao");
+			return true;
+		 }else {
+            return false;
+        }
+	}
+	
 	/*								*/
 	/*------  INTRO ANIMATION	-----*/
 	/*								*/
@@ -61,10 +72,6 @@ $(function(){
 
 	}
 
-    init();
-	$(".loading-page").fadeOut(1500, function(){
-	    $("body").removeClass("fixed");
-	});
 
     function avoid100vh(){
         $(".fixed-holder").height(screenHeight);
@@ -73,6 +80,7 @@ $(function(){
 	/******** 모바일 전용 조정 ********/
 	if(isMobile==true){
         $(".page-title-main").attr("src", "img/page-title-01-m2.png");
+		$(".graphic-holder img").attr("src", "img/main-top-graphic-4-m.png");
          avoid100vh();
         $(".video-boxing iframe").css({"width":$(".blank img").width(),"height": (14*(screenWidth-30)/25 )});
         $(".interactive-header .page-title").html("비동의강간죄 발의 1년, 여전히 계류중")
@@ -201,9 +209,9 @@ $(function(){
       }
 
 		$(".hideme").each(function(i){
-			if( $(this).hasClass("shown") == false && nowScroll + screenHeight > $(this).offset().top + $(this).outerHeight()*0.5 ){
+			if( $(this).hasClass("shown") == false && nowScroll + screenHeight > $(this).offset().top + $(this).outerHeight()*0.5 && kakao == false ){
 				$(this).addClass("shown")
-				$(this).stop().animate({"opacity": 1},1000);
+				$(this).stop().animate({"opacity": 1},400);
 			}
 		});
 
@@ -563,9 +571,14 @@ $(function(){
 
 		
 		
-	}
-	      
- /******** 검색영역 아이콘  ********/
+	}     
+	/******** 검색영역 아이콘  ********/
+
+	init();
+	$(".loading-page").fadeOut(1500, function(){
+	    $("body").removeClass("fixed");
+	});
+
 	   
 });
 
