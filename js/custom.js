@@ -344,6 +344,12 @@ $(function(){
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".notElected").removeClass("squareHidden");
 				$(".graphic-nar").hide();
+				if (isMobile) {
+					$("#square-holder").stop().animate({"left":	"0"}, 500);
+				} else{
+					$("#square-holder").stop().animate({"left":	"-15em"}, 500);
+				}
+
 				break;
 			case 3:  // 45명
 				if (reverse) {
@@ -361,6 +367,12 @@ $(function(){
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".notElected").removeClass("squareHidden");
 				$(".graphic-nar").hide();
+				if (isMobile) {
+					$("#square-holder").stop().animate({"left":	"0"}, 500);
+				} else{
+					$("#square-holder").stop().animate({"left":	"-15em"}, 500);
+				}
+
 				break;
 			case 4: //15명
 				if (reverse) {
@@ -378,6 +390,12 @@ $(function(){
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".notElected").removeClass("squareHidden");
 				$(".graphic-nar").hide();
+				if (isMobile) {
+					$("#square-holder").stop().animate({"left":	"0"}, 500);
+				} else{
+					$("#square-holder").stop().animate({"left":	"-15em"}, 500);
+				}
+
 				break;
 			case 5: //현재동의
 				if (reverse) {
@@ -398,15 +416,23 @@ $(function(){
 				$("#square-holder").removeClass("scaleUp");
 
 				$(".graphic-nar").hide();
+				if (isMobile) {
+					$("#square-holder").stop().animate({"left":	"0"}, 500);
+				} else{
+					$("#square-holder").stop().animate({"left":	"-15em"}, 500);
+				}
+
 				break;
 
 			case 6: //이전 45명
-				$(".notElected").addClass("squareHidden");
-				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
-				$("#square-holder .elected").css({"opacity":"0.2"});
-				$(".final").css({"opacity":"1"});
-
 				$("#square-holder-2").hide();
+				$("#square-holder").show();
+				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
+				
+				$(".notElected").addClass("squareHidden");
+				$("#square-holder .elected").css({"opacity":"0.2"});
+
+				$(".final").css({"opacity":"1"});
 				$(".person-number-board .value").html("");
 				$(".fixed-holder").css({"z-index": "1"});
 				$(".graphic-nar").hide();
@@ -419,11 +445,13 @@ $(function(){
 				break;
 
 			case 7: //클릭
-				$(".notElected").addClass("squareHidden");
+				$("#square-holder-2").hide();
+				$("#square-holder").show();
 				$("#square-holder").css({"top": - ($("#square-holder").height() / 2)});
+
+				$(".notElected").addClass("squareHidden");
 				$("#square-holder .elected").css({"opacity":"1"});
 
-				$("#square-holder-2").hide();
 				$(".person-number-board .value").html("");
 				$(".graphic-nar").stop().fadeIn();
 				$(".fixed-holder").css({"z-index": "3"});
